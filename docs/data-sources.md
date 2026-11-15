@@ -1,38 +1,49 @@
-# Data sources and regeneration
+# Verified NASA POWER data
+
+The production snapshot `public/data/climate.json` now contains authentic observations obtained directly from the NASA POWER monthly point API over verified HTTPS. No synthetic observations are included.
+
+- Dataset: `power-1991-2024-v1`, 1991–2024 inclusive.
+- Coverage: 10 locations, 408 months per location, 8,160 temperature/precipitation values. All requested months passed validation; no missing values were imputed.
+- Locations: Vancouver, Langley/Vancouver, London, Lisbon, Nairobi, Cape Town, Tokyo, Perth, Santiago and Reykjavík.
+- Parameters: T2M, temperature at 2 metres, °C; PRECTOTCORR, corrected precipitation, mm/day.
+- Source: NASA POWER, NASA Langley Research Center; meteorological inputs identified as MERRA-2 in every response.
+- API: POWER Monthly and Annual API v2.10.0; response time standard LST.
+- Retrieval: 2026-11-15 UTC; individual original timestamps, request URLs and raw SHA-256 hashes are embedded in each location's `source` object.
+- Compact snapshot SHA-256: `bc79b9e103e350c035a9716ecd8baf6343bc18ee49acddd87cd3e12ae0a44254`.
+
+The original response headers and parameter descriptions are retained alongside the observations. Raw downloads and integrity receipts remain in ignored `.cache/power`; the compact snapshot and one small genuine parsing fixture are included for offline use.
+
+## Live schema and documentation verification
+
+The new published instance reported a current, enforced unrestricted network policy. A minimal Vancouver request for 2024 returned HTTP 200, following a successful proxy CONNECT. The monthly API documentation was also fetched successfully:
+
+https://power.larc.nasa.gov/docs/services/api/temporal/monthly/
+
+It documents monthly point JSON requests using `start`/`end` years and meteorological source coverage from 1981 onward. The actual responses confirmed the parameter names, units, fill sentinel −999, coordinates, source, API version and requested 19910101–20241231 coverage. The parser accepts January–December keys only: NASA's additional `YYYY13` annual summary is not an extra month and is deliberately excluded. Annual temperature is day-weighted; precipitation rates are multiplied by calendar days, including leap years. Tests cover this using an unmodified genuine response.
 
 NASA POWER: https://power.larc.nasa.gov/
-Monthly point API documentation: https://power.larc.nasa.gov/docs/services/api/temporal/monthly/
+MERRA-2: https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/
 
-## Current acquisition status
-
-**Blocked in this cloud instance:** requests to POWER and the supplied Space Apps challenge URL returned a proxy CONNECT HTTP 403 before reaching the destinations. No NASA response was obtained. Therefore current API metadata, parameter availability and coverage have NOT yet been independently confirmed against live NASA. No real climate dataset has been committed and no discovery is represented as verified. The parser's expected POWER schema must be confirmed against the first successful response before treating the application as submission-ready.
-
-A cloud environment draft adds `power.larc.nasa.gov` and `www.spaceappschallenge.org` to the custom network allowlist, preserving package-manager presets. Saving a draft does not apply runtime access. Both domains are already configured in the saved draft. The observed running instance still reports an older revision without them. See network-diagnosis.md; adding the same domains again is not a remedy. No NASA credentials are expected for these public endpoints.
-
-## Pipeline
+## Reproducible acquisition and import
 
 ```bash
 python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements-lock.txt
 .venv/bin/python -m pip install --no-deps -e .
-# First inspect one response, units, fill_value and temporal metadata:
 .venv/bin/python -m pipeline.generate --limit 1 --download-only
-# Then generate the default 10 geographically diverse points, including Langley/Vancouver:
-.venv/bin/python -m pipeline.generate
+.venv/bin/python -m pipeline.generate --download-only
+.venv/bin/python -m pipeline.generate --offline
+npm run data:check
 ```
 
-Default requested interval: 1991–2024 inclusive, 408 months per point. The 17 curated coordinates are in `pipeline/generate.py`. They are proposed sample points until NASA retrieval and validation succeed. Start with `--limit 2` or more for a frontend-loadable dataset; `--limit 1` is a schema probe only. The UI requires at least two locations and at least 10 years.
+Default period is 1991–2024; default count is 10. Seventeen curated coordinates are available with `--limit 17`, but only the first 10 are in this verified snapshot. Use identical count/period arguments for download and offline import. Downloads are sequential, rate-limited and bounded in size/retries; access denials are not retried. TLS validation stays enabled. `--refresh` explicitly obtains new raw responses and changes retrieval timestamps. Cached/offline import retains receipt timestamps and produces identical bytes for the same archive.
 
-Raw responses and their integrity/retrieval receipts go to ignored `.cache/power/<id>-<start>-<end>.json` and `.receipt.json`. Downloads are sequential, separated by 1.2 seconds, with bounded retries on 429/transient HTTP errors and network failures. TLS verification stays enabled. `--refresh` explicitly replaces cached responses. Validation rejects missing keys, nonfinite/fill values, invalid coordinates, unexpected units and incomplete dates. Annual summary code uses Pandas/NumPy, and SciPy provides independent reference regressions.
+Validation checks units, finite numeric values, missing-value sentinels, requested coordinates and complete dates. Raw SHA-256/URL/time receipts are verified before offline import. A checksum is integrity evidence, not independent authentication; acquire responses from NASA, not an untrusted archive provider. Export is atomic after every selected location passes. See [local acquisition/transfer](local-data-transfer.md).
 
-The pipeline publishes `public/data/climate.json` atomically only after every chosen point validates. The compact JSON retains all monthly temperature and precipitation values, requested coordinates, returned elevation, source URL, retrieval timestamp, title and raw SHA-256. Raw responses are not committed. A cached response retains its receipt timestamp as retrieval time, independent of filesystem modification time. Repeated cached regeneration is reproducible. Derived annual series and fingerprints are recalculated in the browser, not stored as unauditable scores.
+## Interpretation and attribution
 
-After successful acquisition, inspect the response `header`, `parameters`, `geometry`, and `properties.parameter`; confirm units and source product citations. Preserve a small genuine NASA fixture with attribution for deterministic parsing tests, update this status, run all checks, and record a verified discovery in docs/demo.md. Do not rename synthetic fixtures as NASA data.
+These are gridded reanalysis-derived estimates at requested points, not city weather stations. In particular, the Vancouver point's returned source elevation is **565.27 m**, and Langley's is 148.97 m; terrain/coastal grid representation helps explain why nearby points can differ strongly. Do not interpret either as Vancouver airport or a neighbourhood's observed climate. No interpolation to arbitrary coordinates is offered.
 
-## Attribution
+Credit NASA POWER, NASA Langley Research Center, and the MERRA-2 source identified in the responses. This independent application is not endorsed by NASA. Natural Earth supplies public-domain map geometry; see `public/data/NOTICE.md`. It is not environmental measurement data.
 
-Credit NASA POWER, NASA Langley Research Center. Cite the returned product-specific sources when obtained. Do not imply NASA endorses this independent project. Natural Earth supplies the public-domain land geometry (see `public/data/NOTICE.md`); it is not environmental observation data. NASA logos and awards are not used.
-
-The user supplied the 2026 challenge “Be An Earth System Trend Detective!” at https://www.spaceappschallenge.org/2026/challenges/earth-system-trend-detective/. This title and URL are user-provided; live challenge details remain unverified while access is blocked.
-
-See [the network diagnosis](network-diagnosis.md) and [portable local acquisition/offline import](local-data-transfer.md). The domains are already configured in the draft; the observed runtime revision differs. No duplicate allowlist entry is needed.
+The user supplied the 2026 challenge “Be An Earth System Trend Detective!” URL. The challenge page returned HTTP 503 during this session, so its current official requirements remain unverified. This is distinct from the now-successful NASA POWER acquisition. See [network history and resolution](network-diagnosis.md) and the [real-data demo](demo.md).

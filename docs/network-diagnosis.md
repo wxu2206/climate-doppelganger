@@ -1,5 +1,7 @@
 # NASA network diagnosis
 
+**Historical record:** The former NASA acquisition blocker is resolved in the new published instance. Authentic data is included and the data gate passes; see [current acquisition and verification](authentic-data-verification.md). The text below records the earlier instance, not current readiness.
+
 ## Evidence from this continuation session
 
 The saved draft (revision 3) already contains `power.larc.nasa.gov` and `www.spaceappschallenge.org`. No duplicate domain additions or network-policy changes were made. The running instance, however, reports **observed revision 1**, enforced restricted networking, and no custom allowed hosts; neither destination appears in its effective allowlist. Thus the saved intent and observed runtime differ.

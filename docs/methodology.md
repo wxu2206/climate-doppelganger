@@ -12,6 +12,8 @@ For each complete year, with monthly days d and monthly values T and P:
 - Incomplete years are omitted from analysis; at least 10 complete years are required. The current export policy is stricter and rejects any incomplete monthly response.
 - Completeness = present valid monthly observations / expected months in the selected interval.
 
+NASA monthly responses also contain `YYYY13` annual summaries. These are excluded; this application derives annual values from the twelve calendar months rather than counting a thirteenth month.
+
 Annual anomalies subtract the selected-period annual mean. Monthly anomalies subtract the selected-period mean for the corresponding calendar month. Changing the analysis interval recomputes all means, seasonal characteristics, regressions, normalization scales, anomalies and matches. Moving the time-machine slider shows the actual chosen year's annual values; it does not change the trend-fitting interval.
 
 ## Trends and significance

@@ -1,5 +1,7 @@
 # Continuation audit and submission gate
 
+**Historical record:** The former NASA acquisition blocker is resolved in the new published instance. Authentic data is included and the data gate passes; see [current acquisition and verification](authentic-data-verification.md). The text below records the earlier instance, not current readiness.
+
 Production audit: **40/100, blocked for scientific submission**, because authentic observations and a real-data walkthrough are missing. This is an engineering prioritization score, not a scientific measurement or formal security certification. The existing staged implementation and ECC installation were preserved. No remote repository, release, deployment or reference repository was modified.
 
 ## Acquisition outcome

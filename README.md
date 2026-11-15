@@ -2,13 +2,13 @@
 
 **Different worlds. The same story.** A NASA Space Apps Challenge 2026 project exploring geographically distant places with similar climates—or similar environmental changes despite different climates.
 
-> **Development status:** The application and analysis pipeline are implemented. NASA acquisition is blocked by this Codex Cloud instance's network policy. No verified NASA climate dataset has been obtained or committed yet; the normal app explicitly reports unavailable data. This checkout is not submission-ready until acquisition, schema verification and a real-data demonstration are completed. Synthetic data exists only in labelled automated tests.
+> **Data status:** The application now includes authentic NASA POWER observations for 10 locations, 1991–2024. The submission data gate passes, and Climate Twins/Change Twins are checked against the real snapshot and independent SciPy calculations. The official 2026 challenge page returned HTTP 503, so final challenge compliance and submission remain pending.
 
 ## The problem
 
 Average climate does not tell the whole story of environmental change. Two distant places can have different temperatures and rainfall yet experience comparable trends. Climate Doppelgänger makes that distinction visible, with interpretable statistical evidence rather than arbitrary similarity percentages or unsupported AI claims.
 
-The user-supplied challenge is [Be An Earth System Trend Detective!](https://www.spaceappschallenge.org/2026/challenges/earth-system-trend-detective/). Its live 2026 requirements remain unverified while the challenge site is blocked. This is an independent project, not endorsed by NASA.
+The user-supplied challenge is [Be An Earth System Trend Detective!](https://www.spaceappschallenge.org/2026/challenges/earth-system-trend-detective/). Its live 2026 requirements remain unverified because the challenge page returned HTTP 503. This is an independent project, not endorsed by NASA.
 
 ## Implemented features
 
@@ -23,11 +23,15 @@ The user-supplied challenge is [Be An Earth System Trend Detective!](https://www
 - **Static deployment architecture:** no backend, accounts, database, paid AI or runtime NASA request.
 - **Python ingestion:** bounded sequential downloads, retries, local caching, strict validation, atomic compact export and raw-source hashes.
 
-These features have been exercised using clearly labelled test fixtures. Actual NASA-derived findings and a verified demonstration are **pending**. No specific climate discovery, award or completed submission is claimed. Real-data screenshots will be added when available.
+These features have been exercised with the included authentic observations as well as separately labelled synthetic fixtures. The [reproducible demo](docs/demo.md) shows Lisbon selecting Cape Town as its Climate Twin and Reykjavík as its Change Twin at default weights, with explicit statistical uncertainty. No award or completed submission is claimed.
+
+![Authentic NASA observations in the desktop explorer](docs/images/authentic-desktop.png)
+
+[View the mobile explorer screenshot](docs/images/authentic-mobile.png). Both screenshots use the included authentic snapshot.
 
 ## Scientific approach
 
-The intended source is NASA POWER monthly T2M (°C) and PRECTOTCORR (mm/day), requesting 1991–2024 at 17 proposed sample points including Langley/Vancouver, BC. Parameter schema, units and coverage must be confirmed against live responses before release.
+The verified source is NASA POWER monthly T2M (°C) and PRECTOTCORR (mm/day), covering 1991–2024 at 10 validated points including Vancouver and Langley, BC. Seventeen coordinates are available in the pipeline, but only the first 10 are included in this snapshot. Live responses confirmed parameter schema, units and coverage.
 
 Monthly temperatures are day-weighted into annual means; rainfall rates are multiplied by calendar-month days and summed into annual mm. OLS estimates per-decade trends, Student-t slope intervals and two-sided nominal p-values. Each matching feature is standardized across the selected-period sample cohort. A weighted Euclidean distance gives an explainable ranking; lower is closer and zero means identical selected features. It is not a probability or percent match.
 
@@ -46,7 +50,7 @@ npm ci
 npm run dev
 ```
 
-Without `public/data/climate.json`, the app shows an explicit dataset-unavailable state. To prepare data, use a local Python environment and a network policy allowing `power.larc.nasa.gov`:
+The included `public/data/climate.json` makes the demonstration work without contacting NASA. To regenerate it, use a local Python environment and permitted access to `power.larc.nasa.gov`:
 
 ```bash
 python3 -m venv .venv
@@ -56,7 +60,7 @@ python3 -m venv .venv
 .venv/bin/python -m pipeline.generate            # validate the default 10 points
 ```
 
-No credentials are expected. Never substitute generated numbers when retrieval fails. See [development](docs/development.md) for cloud cache settings and [data sources](docs/data-sources.md) for the precise remaining acquisition steps.
+No credentials are expected. Run `npm run data:check` after regeneration. Never substitute generated numbers when retrieval fails. See [development](docs/development.md) for cloud cache settings and [data sources](docs/data-sources.md) for verified provenance and reproducible acquisition.
 
 ## Checks
 
@@ -81,7 +85,7 @@ npm run test:e2e
 CHROMIUM_PATH=/usr/bin/chromium npm run test:e2e
 ```
 
-Tests verify calculations, validation failures, changing modes/weights/periods, search, map rendering, charts, discovery, timeline, modal keyboard behavior and responsive width. Passing fixture tests does not validate real NASA observations. GitHub Actions is configured for Node 24 and Python 3.11/3.13; a hosted Actions run has not been performed. See [verification evidence](docs/verification.md).
+Tests verify calculations, validation failures, changing modes/weights/periods, search, map rendering, charts, discovery, timeline, modal keyboard behavior and responsive width. Passing fixture tests does not validate real NASA observations. GitHub Actions is configured for Node 24 and Python 3.11/3.13; hosted Actions results have not been verified. See [current verification evidence](docs/authentic-data-verification.md).
 
 ## Architecture and deployment
 
@@ -93,7 +97,7 @@ Cloudflare Pages can build with `npm run build` and serve `dist`. No deployment 
 
 No secrets belong in browser bundles. Inputs are validated, data is never evaluated as code, React renders text, and the basemap has no third-party tile requirement. See [security policy](SECURITY.md) for private reporting, dependency review and supply-chain boundaries.
 
-This is exploratory analysis, not forecasting, attribution or policy advice. POWER grid cells may not represent local terrain/coasts; annual aggregation hides extremes. Only temperature and precipitation are implemented. Autocorrelation-aware inference, extra NASA variables and broader sampling are future work. The 17 proposed sample points become supported observations only after successful validation.
+This is exploratory analysis, not forecasting, attribution or policy advice. POWER grid cells may not represent local terrain/coasts; annual aggregation hides extremes. Only temperature and precipitation are implemented. Autocorrelation-aware inference, extra NASA variables and broader sampling are future work. Only the 10 validated points in this snapshot are supported observations; the seven additional curated coordinates require separate acquisition and validation.
 
 ## Contributing and licensing
 
@@ -101,4 +105,8 @@ See [CONTRIBUTING.md](CONTRIBUTING.md), [AGENTS.md](AGENTS.md), the [Code of Con
 
 The application retains the [MIT License](LICENSE), Copyright (c) 2026 Will Xu. Selected official Everything Claude Code skills are vendored under `.agents/skills` with ECC's MIT notice and a revision/hash manifest in [.agents/ecc](.agents/ecc/README.md). Use them only when relevant; no hooks, MCPs or global ECC installation are configured. Natural Earth geometry is public domain. Credit NASA POWER, NASA Langley Research Center for any successfully acquired environmental data; preserve parameter-specific citations in response metadata. No NASA endorsement is implied.
 
-See [the network diagnosis](docs/network-diagnosis.md) and [portable local acquisition/offline import](docs/local-data-transfer.md). The domains are already configured in the draft; the observed runtime revision differs. No duplicate allowlist entry is needed.
+See [the network diagnosis](docs/network-diagnosis.md) and [portable local acquisition/offline import](docs/local-data-transfer.md). The earlier policy mismatch is resolved in the published instance; NASA POWER now responds successfully. The offline workflow remains available as a fallback.
+
+## Submission review
+
+See the [final readiness checklist](docs/submission-readiness.md), [submission-form drafts](docs/submission-form.md), and [review description](docs/pull-request.md). Official 2026 challenge wording and portal-specific requirements still require confirmation; local verification is separate from hosted CI and an official submission.
