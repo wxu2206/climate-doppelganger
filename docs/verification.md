@@ -1,5 +1,7 @@
 # Verification evidence
 
+**Historical record:** The former NASA acquisition blocker is resolved in the new published instance. Authentic data is included and the data gate passes; see [current acquisition and verification](authentic-data-verification.md). The text below records the earlier instance, not current readiness.
+
 This document records the initial implementation baseline. For the newer continuation audit and current counts, see [audit follow-up](audit-followup.md).
 
 ## Outcome

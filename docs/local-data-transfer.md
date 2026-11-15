@@ -10,7 +10,7 @@ python3 -m venv .venv
 .venv/bin/python -m pipeline.generate --limit 1 --download-only
 ```
 
-Inspect the raw response and receipt in `.cache/power`. Check header title/source citations/fill value, geometry, T2M units (C) and PRECTOTCORR units (mm/day), and all requested dates. **The live schema remains unverified in the cloud**, so investigate any validation failure against NASA documentation instead of weakening checks blindly.
+Inspect the raw response and receipt in `.cache/power`. Check header title/source citations/fill value, geometry, T2M units (C) and PRECTOTCORR units (mm/day), and all requested dates. The schema has now been verified against NASA POWER API v2.10.0; see data-sources.md, so investigate any validation failure against NASA documentation instead of weakening checks blindly.
 
 Then acquire ten geographically diverse points, including Vancouver proper and Langley:
 
@@ -35,4 +35,4 @@ To move data between your computers, transfer the raw files and their receipt fi
 
 `--output /path/to/climate.json` supports isolated validation before replacing the frontend file. Export is atomic after all selected locations pass; corruption must not replace the previous dataset. Raw downloads and receipts remain uncommitted in `.cache`; commit only the compact validated `public/data/climate.json` after review. Do not commit test fixtures as NASA observations.
 
-The offline workflow is integration-tested using explicitly synthetic temporary test archives, including repeated-byte reproducibility and tampering rejection. This establishes workflow behavior, not successful NASA acquisition. After actual acquisition, run all quality checks, verify the UI with authentic observations, preserve a small genuine NASA parsing fixture, record a calculated discovery and update the submission status. `npm run data:check` intentionally fails while the production dataset is absent or labelled synthetic.
+The offline workflow is integration-tested using explicitly synthetic temporary test archives, including repeated-byte reproducibility and tampering rejection. Authentic acquisition has also succeeded in the new published instance. For a refreshed archive, run all quality checks, verify the UI with authentic observations, preserve a small genuine NASA parsing fixture, record a calculated discovery and update the submission status. `npm run data:check` intentionally fails while the production dataset is absent or labelled synthetic.
