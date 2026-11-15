@@ -99,6 +99,10 @@ No secrets belong in browser bundles. Inputs are validated, data is never evalua
 
 This is exploratory analysis, not forecasting, attribution or policy advice. POWER grid cells may not represent local terrain/coasts; annual aggregation hides extremes. Only temperature and precipitation are implemented. Autocorrelation-aware inference, extra NASA variables and broader sampling are future work. Only the 10 validated points in this snapshot are supported observations; the seven additional curated coordinates require separate acquisition and validation.
 
+## AI assistance
+
+OpenAI Codex assisted implementation, tests, data-processing code, documentation and presentation tooling. NASA POWER observations are authentic, scientific calculations are deterministic, and screenshots and recordings capture the running application. No AI-generated observations, imagery, footage or audio are used. See the [development and media credits](submission/credits.md) and [structured disclosure](submission/si-disclosure.json) for details.
+
 ## Contributing and licensing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md), [AGENTS.md](AGENTS.md), the [Code of Conduct](CODE_OF_CONDUCT.md) and the [demo guide](docs/demo.md).
@@ -113,4 +117,4 @@ See the [final readiness checklist](docs/submission-readiness.md), [submission-f
 
 ## Submission package
 
-The [submission package](submission/README.md) contains the required [seven-slide Project Demo](submission/presentation/climate-doppelganger.pdf), editable PPTX, authentic application screenshots, extended supporting recording, submission text, attribution, and deployment handoff. Team: **Team Name Team**; member: **William Xu**. The supplied Universal Event deadline is November 15, 2026, 11:59 p.m. America/Vancouver (November 16, 06:59 UTC). See [rule evidence](submission/requirements.md) and the [human-action checklist](submission/final-checklist.md). [SI-development disclosure](submission/si-disclosure.json) identifies Codex-assisted code, tests, documents and layout; NASA observations and captured media are authentic, with no generative imagery.
+The [submission package](submission/README.md) contains the required [seven-slide Project Demo](submission/presentation/climate-doppelganger.pdf), editable PPTX, authentic application screenshots, extended supporting recording, submission text, attribution, and deployment handoff. Team: **Team Name Team**; member: **William Xu**. The supplied Universal Event deadline is November 15, 2026, 11:59 p.m. America/Vancouver (November 16, 06:59 UTC). See [rule evidence](submission/requirements.md) and the [human-action checklist](submission/final-checklist.md).
