@@ -8,7 +8,7 @@
 
 Average climate does not tell the whole story of environmental change. Two distant places can have different temperatures and rainfall yet experience comparable trends. Climate Doppelgänger makes that distinction visible, with interpretable statistical evidence rather than arbitrary similarity percentages or unsupported AI claims.
 
-The user-supplied challenge is [Be An Earth System Trend Detective!](https://www.spaceappschallenge.org/2026/challenges/earth-system-trend-detective/). Its live 2026 requirements remain unverified because the challenge page returned HTTP 503. This is an independent project, not endorsed by NASA.
+The user-supplied challenge is [Be An Earth System Trend Detective!](https://www.spaceappschallenge.org/2026/challenges/earth-system-trend-detective/). This is an independent project, not endorsed by NASA.
 
 ## Implemented features
 
