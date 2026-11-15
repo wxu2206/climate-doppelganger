@@ -17,3 +17,5 @@ playwright-report/
 .env.*
 !.env.example
 .DS_Store
+# Intermediate browser recordings; retain only selected encoded submission media.
+submission/video/recording.webm

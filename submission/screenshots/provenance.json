@@ -1,0 +1,67 @@
+{
+  "dataset_sha256": "bc79b9e103e350c035a9716ecd8baf6343bc18ee49acddd87cd3e12ae0a44254",
+  "base_url": "http://127.0.0.1:4190",
+  "tool": "Chromium via Playwright; no mocked responses, image generation or scientific image editing",
+  "images": [
+    {
+      "file": "screenshots/01-desktop.png",
+      "source": "Unmocked production browser screenshot; committed NASA POWER snapshot",
+      "sha256": "4c04aee1bafc1ebb691d2def818ffe466f1569b8a75a20b05dbe5e61ee462ccb"
+    },
+    {
+      "file": "screenshots/02-map.png",
+      "source": "Unmocked production browser screenshot; committed NASA POWER snapshot",
+      "sha256": "ede4b9b49f5f7639c36c8f2bd3538a77de853b51db79d3e3fc3b951838a2c94b"
+    },
+    {
+      "file": "screenshots/03-climate-twins.png",
+      "source": "Unmocked production browser screenshot; committed NASA POWER snapshot",
+      "sha256": "8be68ddca7fbf78977af8983a6066ef0c3f1b245c221777824cca71778aa54ac"
+    },
+    {
+      "file": "screenshots/11-climate-detail.png",
+      "source": "Unmocked production browser screenshot; committed NASA POWER snapshot",
+      "sha256": "a670bcca8fb1a19095d69e5ea4f82bcdccfa9491441b2d1f2d945b1927e54d7e"
+    },
+    {
+      "file": "screenshots/04-change-twins.png",
+      "source": "Unmocked production browser screenshot; committed NASA POWER snapshot",
+      "sha256": "a97faac0d5815105955906910b9dab9adf4a807af7b803087d3dc3d2170c7ef9"
+    },
+    {
+      "file": "screenshots/12-change-detail.png",
+      "source": "Unmocked production browser screenshot; committed NASA POWER snapshot",
+      "sha256": "d97b82099b75b1054c8c90e7fc3230e7a88d35f2b27924d33d28da22a5b66a49"
+    },
+    {
+      "file": "screenshots/05-temperature.png",
+      "source": "Unmocked production browser screenshot; committed NASA POWER snapshot",
+      "sha256": "c90c979023ac3a41e450ec735b91720722064c6447ab081d85456b2ccc2d823c"
+    },
+    {
+      "file": "screenshots/06-precipitation.png",
+      "source": "Unmocked production browser screenshot; committed NASA POWER snapshot",
+      "sha256": "aa690774d2ef4596af4082d487d8826d199359576ed47b4aafed91da932aa6bc"
+    },
+    {
+      "file": "screenshots/07-statistics.png",
+      "source": "Unmocked production browser screenshot; committed NASA POWER snapshot",
+      "sha256": "adbf0b94b2110fd0750bc6e8d5221f396a6c44cdbf95b085e5d70f74a3cedc48"
+    },
+    {
+      "file": "screenshots/08-methodology.png",
+      "source": "Unmocked production browser screenshot; committed NASA POWER snapshot",
+      "sha256": "8b8800bda47a1a1a4f123bcb51a5d6ade4943951cda628e79fa99865a89f90ca"
+    },
+    {
+      "file": "screenshots/09-mobile.png",
+      "source": "Unmocked production browser screenshot; committed NASA POWER snapshot",
+      "sha256": "27b6d65ce08eb607e4e589d178a86ac7b8aa321a1b97bea9a264b217a53dccd0"
+    },
+    {
+      "file": "screenshots/10-seasonal.png",
+      "source": "Unmocked production browser screenshot; committed NASA POWER snapshot",
+      "sha256": "e2315df130c88ee701937398a3d8a9e0e716c9585c52813487c4f5c5a9bbeeb3"
+    }
+  ]
+}

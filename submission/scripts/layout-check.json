@@ -1,0 +1,786 @@
+{
+  "slides": 7,
+  "all_text_within_canvas": true,
+  "objects": [
+    {
+      "slide": 1,
+      "text": "NASA SPACE APPS CHALLENGE 2026 \u00b7 PROJECT PRESENTATION",
+      "bounds": [
+        42,
+        24,
+        876,
+        21.0
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "Climate Doppelg\u00e4nger",
+      "bounds": [
+        42,
+        54,
+        876,
+        49.6
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "The Same Story.",
+      "bounds": [
+        42,
+        120,
+        365,
+        96.4
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "selected patterns of change.",
+      "bounds": [
+        42,
+        250,
+        335,
+        89.9
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "Authentic NASA POWER data. Transparent comparisons.",
+      "bounds": [
+        42,
+        454,
+        870,
+        28.8
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "NASA POWER / MERRA-2 | 10 points | 1991\u20132024 | Independent project; no NASA endorsement",
+      "bounds": [
+        42,
+        505,
+        820,
+        19.700000000000003
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "01",
+      "bounds": [
+        890,
+        505,
+        30,
+        21.0
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "01 / THE PROBLEM",
+      "bounds": [
+        42,
+        24,
+        876,
+        21.0
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "A similar climate is not the same change",
+      "bounds": [
+        42,
+        54,
+        876,
+        49.6
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "related change features.",
+      "bounds": [
+        42,
+        120,
+        420,
+        127.60000000000001
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "CLIMATE",
+      "bounds": [
+        548,
+        146,
+        330,
+        23.6
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "seasonality",
+      "bounds": [
+        548,
+        180,
+        330,
+        65.2
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "CHANGE",
+      "bounds": [
+        548,
+        316,
+        330,
+        23.6
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "Trend estimates + variability",
+      "bounds": [
+        548,
+        350,
+        330,
+        36.6
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "conclusions.",
+      "bounds": [
+        42,
+        365,
+        420,
+        67.80000000000001
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "NASA POWER / MERRA-2 | 10 points | 1991\u20132024 | Independent project; no NASA endorsement",
+      "bounds": [
+        42,
+        505,
+        820,
+        19.700000000000003
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "02",
+      "bounds": [
+        890,
+        505,
+        30,
+        21.0
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "02 / OUR SOLUTION",
+      "bounds": [
+        42,
+        24,
+        876,
+        21.0
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "Two views of the same planet",
+      "bounds": [
+        42,
+        54,
+        876,
+        49.6
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "Climate Twins",
+      "bounds": [
+        42,
+        116,
+        420,
+        39.2
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "Similar selected average conditions",
+      "bounds": [
+        42,
+        151,
+        420,
+        28.8
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "Change Twins",
+      "bounds": [
+        500,
+        116,
+        420,
+        39.2
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "Similar trends and detrended variability",
+      "bounds": [
+        500,
+        151,
+        420,
+        28.8
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "User-adjustable weights and periods. Explanations behind every ranking.",
+      "bounds": [
+        42,
+        442,
+        876,
+        31.400000000000002
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "NASA POWER / MERRA-2 | 10 points | 1991\u20132024 | Independent project; no NASA endorsement",
+      "bounds": [
+        42,
+        505,
+        820,
+        19.700000000000003
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "03",
+      "bounds": [
+        890,
+        505,
+        30,
+        21.0
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "03 / SCIENTIFIC WORKFLOW",
+      "bounds": [
+        42,
+        24,
+        876,
+        21.0
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "From NASA data to an explainable match",
+      "bounds": [
+        42,
+        54,
+        876,
+        49.6
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "monthly data",
+      "bounds": [
+        58,
+        153,
+        244,
+        57.4
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "dates and values",
+      "bounds": [
+        358,
+        153,
+        244,
+        57.4
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "OLS trends",
+      "bounds": [
+        658,
+        153,
+        244,
+        57.4
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "change features",
+      "bounds": [
+        58,
+        278,
+        244,
+        57.4
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "weight; rank",
+      "bounds": [
+        358,
+        278,
+        244,
+        57.4
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "CIs and maps",
+      "bounds": [
+        658,
+        278,
+        244,
+        57.4
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "Distance = \u221a\u03a3(weight \u00d7 standardized feature difference\u00b2)",
+      "bounds": [
+        42,
+        405,
+        876,
+        36.6
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "Day-weighted temperature \u00b7 rainfall rate \u00d7 calendar days \u00b7 nominal Student-t slope intervals",
+      "bounds": [
+        42,
+        455,
+        876,
+        26.2
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "NASA POWER / MERRA-2 | 10 points | 1991\u20132024 | Independent project; no NASA endorsement",
+      "bounds": [
+        42,
+        505,
+        820,
+        19.700000000000003
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "04",
+      "bounds": [
+        890,
+        505,
+        30,
+        21.0
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "04 / VERIFIED DISCOVERY",
+      "bounds": [
+        42,
+        24,
+        876,
+        21.0
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Lisbon has two different top matches",
+      "bounds": [
+        42,
+        54,
+        876,
+        49.6
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Climate Twin \u2192 Cape Town",
+      "bounds": [
+        60,
+        146,
+        384,
+        37.900000000000006
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Distance 0.188 \u00b7 8,562 km away",
+      "bounds": [
+        60,
+        187,
+        384,
+        32.7
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Change Twin \u2192 Reykjav\u00edk",
+      "bounds": [
+        518,
+        146,
+        384,
+        37.900000000000006
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Distance 0.461 \u00b7 2,951 km away",
+      "bounds": [
+        518,
+        187,
+        384,
+        32.7
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "between Lisbon and Reykjav\u00edk.",
+      "bounds": [
+        42,
+        280,
+        510,
+        65.2
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Minimum separation 1,500 km",
+      "bounds": [
+        42,
+        355,
+        510,
+        39.2
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "not just slopes.",
+      "bounds": [
+        42,
+        410,
+        510,
+        66.5
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Actual temperature histories",
+      "bounds": [
+        590,
+        280,
+        330,
+        23.6
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "NASA POWER / MERRA-2 | 10 points | 1991\u20132024 | Independent project; no NASA endorsement",
+      "bounds": [
+        42,
+        505,
+        820,
+        19.700000000000003
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "05",
+      "bounds": [
+        890,
+        505,
+        30,
+        21.0
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "05 / SCIENTIFIC EVIDENCE",
+      "bounds": [
+        42,
+        24,
+        876,
+        21.0
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Similar estimates. Honest uncertainty.",
+      "bounds": [
+        42,
+        54,
+        876,
+        49.6
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Temperature change (\u00b0C / decade)",
+      "bounds": [
+        42,
+        116,
+        530,
+        30.1
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Lisbon",
+      "bounds": [
+        42,
+        173,
+        150,
+        34.0
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "p = 0.137",
+      "bounds": [
+        540,
+        174,
+        130,
+        31.400000000000002
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Reykjav\u00edk",
+      "bounds": [
+        42,
+        255,
+        150,
+        34.0
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "p = 0.324",
+      "bounds": [
+        540,
+        256,
+        130,
+        31.400000000000002
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "< 0.05.",
+      "bounds": [
+        42,
+        335,
+        876,
+        65.2
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "autocorrelation and multiple testing.",
+      "bounds": [
+        42,
+        409,
+        876,
+        52.2
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "95% CI [\u22120.033, +0.229]",
+      "bounds": [
+        685,
+        160,
+        232,
+        49.6
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "95% CI [\u22120.079, +0.233]",
+      "bounds": [
+        685,
+        242,
+        232,
+        49.6
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "-0.1",
+      "bounds": [
+        190.0,
+        296,
+        55,
+        21.0
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "+0.0",
+      "bounds": [
+        278.57142857142856,
+        296,
+        55,
+        21.0
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "+0.1",
+      "bounds": [
+        367.14285714285717,
+        296,
+        55,
+        21.0
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "+0.2",
+      "bounds": [
+        455.7142857142858,
+        296,
+        55,
+        21.0
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "NASA POWER / MERRA-2 | 10 points | 1991\u20132024 | Independent project; no NASA endorsement",
+      "bounds": [
+        42,
+        505,
+        820,
+        19.700000000000003
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "06",
+      "bounds": [
+        890,
+        505,
+        30,
+        21.0
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "06 / IMPACT AND NEXT STEPS",
+      "bounds": [
+        42,
+        24,
+        876,
+        21.0
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "Make environmental comparisons reproducible",
+      "bounds": [
+        42,
+        54,
+        876,
+        49.6
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "For students and educators",
+      "bounds": [
+        42,
+        125,
+        420,
+        37.900000000000006
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "significance and causation.",
+      "bounds": [
+        42,
+        170,
+        420,
+        89.9
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "Future work",
+      "bounds": [
+        505,
+        125,
+        410,
+        37.900000000000006
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "richer seasonal comparisons.",
+      "bounds": [
+        505,
+        170,
+        410,
+        89.9
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "github.com/wxu2206/climate-doppelganger",
+      "bounds": [
+        42,
+        315,
+        876,
+        39.2
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "No live site is claimed. Official 2026 submission rules still require confirmation.",
+      "bounds": [
+        42,
+        382,
+        876,
+        49.6
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "Transparent methods. Authentic data. Explicit limitations.",
+      "bounds": [
+        42,
+        455,
+        876,
+        35.3
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "NASA POWER / MERRA-2 | 10 points | 1991\u20132024 | Independent project; no NASA endorsement",
+      "bounds": [
+        42,
+        505,
+        820,
+        19.700000000000003
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "07",
+      "bounds": [
+        890,
+        505,
+        30,
+        21.0
+      ]
+    }
+  ]
+}
