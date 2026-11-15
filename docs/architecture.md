@@ -1,0 +1,13 @@
+# Architecture
+
+The application is a static React/TypeScript/Vite site, compatible with Cloudflare Pages (`npm run build`, output `dist`). No backend, database, account, key or paid service is needed. MapLibre renders bundled Natural Earth geometry, sample points and a shortest-longitude connection; Recharts renders the analytical series. Map and chart libraries are lazy-loaded. MapLibre's worker is explicitly bundled, avoiding runtime CDN dependencies. A WebGL failure exposes a coordinate picker; the native location selector remains available for keyboard use.
+
+`pipeline/generate.py` downloads NASA POWER monthly point responses to ignored `.cache/power`. It validates schema, coordinates, units, finite observations and full monthly coverage before atomically exporting `public/data/climate.json`. Raw bytes stay local; their SHA-256 hashes and original API URLs accompany the compact dataset. No synthetic fallback exists.
+
+`src/data/validate.ts` independently checks the static JSON at the browser boundary. `src/hooks/useDataset.ts` owns loading and cancellation. `src/core/science.ts` is DOM-independent analysis: annual aggregation, regression, anomalies, seasonal features, geographic separation and weighted matching. `src/components` contains the map and history views; `src/App.tsx` orchestrates selection, period, weights, discovery and export. Data and analysis are not persisted in browser storage.
+
+Unit tests cover calculations and validation; UI tests cover state changes. Playwright uses explicitly labelled synthetic responses to test UI without NASA access; production always requests the static dataset. Browser tests never write their fixtures to public/data. Python tests use explicitly synthetic schema fixtures and known calendar answers. SciPy generates independent reference values for the TypeScript Student-t calculations.
+
+No GitHub Actions workflow existed initially. CI now checks Node 24 and Python 3.11/3.13 with local data and no live API requirement. All action references are pinned to inspected tag SHAs. Builds do not deploy. Security headers for Pages are in `public/_headers`; inline styles are allowed because Recharts/MapLibre position elements dynamically. Scripts remain self-only; the map worker is local.
+
+The reference projects informed the local-first architecture, clear limitations, beginner-friendly governance, immutable-host restrictions and deterministic tests. Their application code and domain-specific machinery/game rules were not copied. The existing Will Xu MIT notice is unchanged. The Contributor Covenant is adapted from the primary reference with its existing verified maintainer contact and CC BY-SA attribution preserved.
