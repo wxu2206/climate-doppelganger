@@ -1,0 +1,21 @@
+{
+  "team_name": "Team Name Team",
+  "members": [
+    {
+      "name": "William Xu"
+    }
+  ],
+  "challenge": "Be An Earth System Trend Detective!",
+  "event": "Universal Event",
+  "residence_timezone": "America/Vancouver",
+  "submission_closes_local": "2026-11-15T23:59:00-07:00",
+  "submission_closes_utc": "2026-11-16T06:59:00Z",
+  "identity_source": "Owner's chat response, 2026-11-15 UTC",
+  "owner_originality_statement": "All work is original",
+  "accepted_participant_status": "not_verified",
+  "portal_terms_and_originality_checkboxes": "must_be_completed_by_owner",
+  "submitted_for_judging": "not_verified",
+  "submission_opens_local": "2026-11-14T09:00:00-07:00",
+  "submission_opens_utc": "2026-11-14T16:00:00Z",
+  "timezone_data": "IANA tzdata 2026b; America/Vancouver remains UTC-07 after March 2026. Portal local-time deadline is authoritative."
+}

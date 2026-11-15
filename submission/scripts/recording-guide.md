@@ -1,8 +1,10 @@
-# Reproducible recording and speaker handoff
+# Extended supporting walkthrough: recording guide
 
-No official duration limit could be verified (official pages returned HTTP 503). The supplied silent browser recording is a rehearsal, not a claim of format compliance. Confirm the actual limit before uploading; the owner may add their own narration using the spoken script in ../submission-answers.md.
+**This recording is optional EXTENDED SUPPORTING material, not the required Project Demo.** The owner-supplied Project Submission Guide permits up to seven slides including the title/intro **or** a video no longer than 30 seconds. The selected required demo is the seven-slide PDF in `../presentation/climate-doppelganger.pdf`. No short video needs to be created.
 
-## Shot sequence
+The existing silent browser recording is **100.64 seconds** and exceeds the guide's video-demo limit. Do not paste its link into the Project Demo field. If included as a supplementary repository resource, keep its supporting-only label visible. The guide text was owner-supplied; prior live challenge/resources requests returned HTTP 503.
+
+## Optional supporting shot sequence
 
 | Approximate capture hold | Real application state                    |
 | ------------------------ | ----------------------------------------- |
@@ -18,15 +20,26 @@ No official duration limit could be verified (official pages returned HTTP 503).
 | 76–82 s                  | Seasonal chart                            |
 | 82–88 s                  | Return to the top                         |
 
-These are intended hold durations; loading, scrolling and capture add time. The exact encoded duration is recorded in ../video/metadata.json. The actual frame sequence is recorded, not synthesized. No voice, music or generative imagery is included. Explain in narration that both Lisbon/Reykjavík temperature intervals contain zero and the match includes variability.
+These are intended holds; loading, scrolling and capture add time. The encoded duration and stream metadata are in `../video/metadata.json`. Browser footage is captured, not synthesized. No voice, music, human likeness or generative imagery is included. Codex-assisted recording/layout code is disclosed as software assistance rather than falsely labelling authentic captured frames as generated video.
 
-## Recreate locally
+If a presenter explains the supporting walkthrough separately, say that both Lisbon/Reykjavík temperature slope intervals contain zero, neither is nominally significant at p<0.05, and the change match includes variability. Similarity does not show equal slopes, common causation or prediction. Do not record a minor's face or voice or add unlicensed media. Non-English spoken content would require English subtitles under the supplied guide.
 
-Use the existing Node 24 environment, npm ci, npm run data:check, npm run build, then npm run preview -- --port 4190 --strictPort. Run `node submission/scripts/capture.mjs` for screenshots. For video, Playwright requires its own user-space encoder; use `PLAYWRIGHT_BROWSERS_PATH=/workspace/.playwright npx --no-install playwright install ffmpeg` in this cloud environment, or a writable local directory on your computer, then run:
+## Recreate locally only if needed
+
+Use existing Node 24 tools and repository-local dependencies:
+
+```bash
+npm ci
+npm run data:check
+npm run build
+npm run preview -- --port 4190 --strictPort
+```
+
+In a separate terminal, `node submission/scripts/capture.mjs` captures screenshots. For supporting video, Playwright requires its user-space encoder. Use `PLAYWRIGHT_BROWSERS_PATH=/workspace/.playwright npx --no-install playwright install ffmpeg` in this cloud environment, or an existing writable local directory on your own computer, then run:
 
 ```bash
 PLAYWRIGHT_BROWSERS_PATH=/workspace/.playwright RECORD=1 node submission/scripts/capture.mjs
 ffmpeg -i submission/video/recording.webm -c:v libx264 -pix_fmt yuv420p -crf 23 -movflags +faststart -an submission/video/climate-doppelganger.mp4
 ```
 
-Set CHROMIUM_PATH for a different existing Chromium binary and DEMO_URL for the local preview. Do not install system packages if unavailable. Do not overwrite a manually edited recording without preserving it. After conversion, inspect the video and run ffprobe; retain only the selected final MP4 in Git, not temporary raw recordings. There is no official upload, deployment or media hosting action in this workflow.
+Set `CHROMIUM_PATH` for another existing Chromium binary and `DEMO_URL` for the local preview. Do not install system packages. Preserve manually edited recordings before replacing them. Inspect the result, run ffprobe/full decoding, update truthful metadata and artifact hashes, and retain only the selected MP4 in Git rather than temporary raw recordings. These commands do not deploy, host or submit any media.

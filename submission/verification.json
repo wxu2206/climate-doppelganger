@@ -1,0 +1,131 @@
+{
+  "checked_utc_date": "2026-11-15",
+  "scope": "Final guideline and package review; application and authentic observations preserved",
+  "versions": {
+    "node": "v24.22.1",
+    "npm": "11.9.0",
+    "python": "Python 3.12.14"
+  },
+  "dataset_sha256": "bc79b9e103e350c035a9716ecd8baf6343bc18ee49acddd87cd3e12ae0a44254",
+  "checks": [
+    {
+      "command": "npm run data:check",
+      "exit_code": 0
+    },
+    {
+      "command": "npm test",
+      "exit_code": 0
+    },
+    {
+      "command": "npm run typecheck",
+      "exit_code": 0
+    },
+    {
+      "command": "npm run lint",
+      "exit_code": 0
+    },
+    {
+      "command": "npm run build",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/bin/python -m pytest",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/bin/python -m ruff check pipeline tests",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/bin/python -m mypy pipeline",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/bin/python -m pip check",
+      "exit_code": 0
+    },
+    {
+      "command": "npm audit --json",
+      "exit_code": 0
+    }
+  ],
+  "test_counts": {
+    "frontend": 39,
+    "python": 18,
+    "browser": 11
+  },
+  "browser_command": "CHROMIUM_PATH=/usr/bin/chromium npm run test:e2e",
+  "browser_exit_code": 0,
+  "production_browser_smoke": [
+    {
+      "width": 390,
+      "pairs": [
+        {
+          "mode": "Climate twins",
+          "target": "Cape Town",
+          "distance": "0.188"
+        },
+        {
+          "mode": "Change twins",
+          "target": "Reykjav\u00edk",
+          "distance": "0.461"
+        }
+      ],
+      "page_errors": [],
+      "external_requests": [],
+      "axe_violations": [],
+      "horizontal_overflow": false
+    },
+    {
+      "width": 768,
+      "pairs": [
+        {
+          "mode": "Climate twins",
+          "target": "Cape Town",
+          "distance": "0.188"
+        },
+        {
+          "mode": "Change twins",
+          "target": "Reykjav\u00edk",
+          "distance": "0.461"
+        }
+      ],
+      "page_errors": [],
+      "external_requests": [],
+      "axe_violations": [],
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1440,
+      "pairs": [
+        {
+          "mode": "Climate twins",
+          "target": "Cape Town",
+          "distance": "0.188"
+        },
+        {
+          "mode": "Change twins",
+          "target": "Reykjav\u00edk",
+          "distance": "0.461"
+        }
+      ],
+      "page_errors": [],
+      "external_requests": [],
+      "axe_violations": [],
+      "horizontal_overflow": false
+    }
+  ],
+  "artifact_tools": {
+    "python-pptx": "1.0.2",
+    "reportlab": "4.4.9",
+    "Pillow": "13.0.0",
+    "PyMuPDF": "1.26.6"
+  },
+  "limitations": [
+    "Local Python is3.12.14; configured3.11/3.13 matrix requires revision-specific hosted evidence.",
+    "Chromium and axe states only; no complete WCAG or all-browser certification.",
+    "Existing large lazy MapLibre chunk advisory.",
+    "Live2026challenge/resources pages HTTP503; guide user-supplied.",
+    "Hosted deployment and official portal submission not performed."
+  ]
+}

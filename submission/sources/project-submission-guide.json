@@ -1,0 +1,30 @@
+{
+  "source_type": "User-supplied pasted NASA Space Apps Project Submission Guide",
+  "received_utc_date": "2026-11-15",
+  "original_filename": "Pasted text.txt",
+  "source_sha256": "1d4545312f3014a97e4fc4b4b5498b4de416ad180dafc7cb98a6f7640217a3cc",
+  "official_source_url": "not provided with pasted guide",
+  "live_authentication": "Not independently authenticated. Challenge and resources URLs returned HTTP 503 on 2026-11-15 UTC; no older-year rules substituted.",
+  "challenge_url": "https://www.spaceappschallenge.org/2026/challenges/earth-system-trend-detective/",
+  "resources_url": "https://www.spaceappschallenge.org/resources/",
+  "requirements_used": {
+    "demo": "English slide deck up to seven slides including title/intro, or video at most 30 seconds",
+    "identification": "Slides include team name, member names and selected challenge",
+    "hosting": "Public links without login; GitHub accepted; videos/documents externally linked",
+    "nasa_resource": "At least one NASA data or resource for Global Award eligibility",
+    "si": "Disclose where/how; SI-generated images/video watermark; audio/code/data descriptive text and metadata; no generated NASA branding",
+    "deadline": "Sunday November 15, 2026 23:59 event local time; Universal uses Team Owner residence timezone",
+    "submission": "Accepted same-event participants, required English fields, human T&C/originality declarations, Submit for Judging and success banner; Save Progress insufficient",
+    "minor_likenesses": "No image/video/audio/other likeness of under-18 persons in project/demo",
+    "rubric": ["Impact", "Creativity", "Validity", "Relevance", "Presentation"]
+  },
+  "timezone_conversion_source": {
+    "url": "https://data.iana.org/time-zones/tzdb-2026b/northamerica",
+    "checked_utc_date": "2026-11-15",
+    "http_status": 200,
+    "zone": "America/Vancouver",
+    "rule_for_november_2026": "-07:00, no November clock rollback",
+    "submission_closes_utc": "2026-11-16T06:59:00Z",
+    "note": "B.C. government daylight-saving page returned HTTP503. UTC conversion independently matches installed IANA2026b; local23:59 portal deadline remains authoritative."
+  }
+}

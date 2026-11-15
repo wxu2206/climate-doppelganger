@@ -1,20 +1,23 @@
 {
-    "programs": [
-
-    ],
-    "stream_groups": [
-
-    ],
-    "streams": [
-        {
-            "codec_name": "h264",
-            "width": 1440,
-            "height": 1000,
-            "pix_fmt": "yuv420p"
-        }
-    ],
-    "format": {
-        "duration": "100.640000",
-        "size": "2645380"
+  "programs": [],
+  "stream_groups": [],
+  "streams": [
+    {
+      "codec_name": "h264",
+      "width": 1440,
+      "height": 1000,
+      "pix_fmt": "yuv420p"
     }
+  ],
+  "format": {
+    "duration": "100.640000",
+    "size": "2645380"
+  },
+  "role": "supporting_walkthrough",
+  "primary_project_demo": false,
+  "duration_limit_note": "100.64 seconds exceeds the supplied 30-second Project Demo limit. Use the seven-slide PDF/PPTX as the required Project Demo.",
+  "source": "Actual unmocked Chromium screen recording using the authentic NASA dataset",
+  "si_assistance": "OpenAI Codex assisted recording automation and implementation; footage is not SI-generated. See ../si-disclosure.json.",
+  "generated_video_footage": false,
+  "audio": "None"
 }

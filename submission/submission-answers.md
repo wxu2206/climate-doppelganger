@@ -1,129 +1,76 @@
-# NASA Space Apps submission copy
+# Project page answers
 
-These drafts describe verified behavior in the included snapshot. The official 2026 challenge and resources pages returned HTTP 503 during the final review, so field names, character limits, video duration and submission-specific requirements are not confirmed. Adapt these drafts to the live form before submission; do not treat the suggested two-minute script as an official time limit.
+English copy organized under the eight fields in the owner-supplied Project Submission Guide. The guide was provided in conversation, not independently retrieved from the unavailable live pages. No character limits were supplied; apply any limits shown by the actual portal without removing scientific caveats.
 
-## Project name
+Team identification for the selected seven-slide demo: **Team Name Team — William Xu**. Selected challenge: **Be An Earth System Trend Detective!**
+
+## Project Name
 
 Climate Doppelgänger
 
-## Concise project description
+## High-Level Project Summary
 
-Climate Doppelgänger reveals unexpected connections between distant places using authentic NASA POWER/MERRA-2 gridded temperature and precipitation estimates. Its Climate Twins mode compares average conditions and seasonal characteristics, while Change Twins compares trends and year-to-year variability. Users explore ten locations from 1991–2024, adjust weights and periods, compare histories and anomalies, and inspect confidence intervals and nominal significance. A reproducible example connects Lisbon with Cape Town for similar baseline climate features, but with Reykjavík for selected change features. The application works from an included static dataset without accounts, a backend or paid services, and explains why similarity does not establish statistical significance or causation.
+Climate Doppelgänger reveals connections between distant places using authentic NASA POWER/MERRA-2 temperature and precipitation estimates. Climate Twins compares average conditions and seasonal characteristics, while Change Twins compares selected trends and interannual variability. Users explore ten locations from 1991–2024, adjust weights and periods, inspect historical charts and uncertainty, and export reproducible comparisons. For Lisbon, the closest Climate Twin is Cape Town, while the closest Change Twin is Reykjavík at default settings. The application makes environmental comparisons accessible while explaining why similarity is not statistical significance, equal slopes, common causation or a forecast.
 
-## Scientific methodology summary
+## Link to Project Demo
 
-We use NASA POWER monthly T2M (°C) and PRECTOTCORR (mm/day), sourced from MERRA-2, at ten curated coordinates for 1991–2024. The pipeline validates units, coordinates, finite values, missing-value sentinels and complete monthly coverage, retaining request URLs, timestamps, raw-response hashes and source metadata. Annual temperature is weighted by calendar days; annual precipitation multiplies monthly daily rates by month lengths. NASA's `YYYY13` annual summaries are excluded from monthly aggregation.
+https://github.com/wxu2206/climate-doppelganger/blob/submission/guideline-compliance/submission/presentation/climate-doppelganger.pdf
 
-Ordinary least squares estimates per-decade trends with Student-t 95% slope intervals and two-sided nominal p-values. Climate Twins uses mean temperature, annual precipitation and two seasonal characteristics. Change Twins uses temperature/precipitation slopes and detrended annual variability. Feature differences are standardized across the selected-period sample cohort and combined with normalized user weights into an explainable Euclidean distance. Lower means closer, not a probability or percentage. Anomalies use each location's selected-period baseline.
+**Use this seven-slide PDF for the required Project Demo.** It must include Team Name Team, William Xu and the selected challenge title. The editable PowerPoint is a source format, not an additional required demo. Confirm public anonymous access after the final branch assets are published.
 
-Inference assumes independent residuals; serial correlation and multiple comparisons are not corrected. Similarity is not a test of equal slopes, a causal explanation or a prediction. Coastal/terrain grid representation and the small sample network limit interpretation.
+Do not use the existing 100.64-second recording in this field: the supplied guide limits a video Project Demo to **30 seconds or less**. That longer recording is an extended supporting walkthrough only. A separate short video is unnecessary because the permitted slide-deck route is selected.
 
-## Suggested demonstration script, approximately two minutes
+## Link to Final Project
 
-**0:00–0:20: the idea**
+https://github.com/wxu2206/climate-doppelganger
 
-“Two places can have similar climates but change differently. They can also have different climates while sharing selected patterns of change. Climate Doppelgänger separates these questions using NASA data.”
+The public repository is the final-project source and includes validated NASA data and local run instructions. For review of the updated guideline-compliance package before merge:
+https://github.com/wxu2206/climate-doppelganger/tree/submission/guideline-compliance
 
-**0:20–0:40: the evidence**
+No deployed website is claimed or required for this repository-hosted route. Documents and videos must be linked from the public repository; do not attempt to upload them as document/video files to the Project page.
 
-“Here are ten supported locations, including Vancouver and Langley, with 34 years of NASA POWER temperature and precipitation estimates. These are gridded reanalysis data, not individual city weather stations. Every location retains its source and retrieval information.”
+## Detailed Project Description
 
-**0:40–1:05: Climate Twins**
+Climate Doppelgänger separates two questions that are often confused: which places have similar climate conditions, and which places have similar selected patterns of environmental change? The application supports transparent, educational exploration rather than automatic attribution or prediction.
 
-“Select Lisbon, 1991–2024, temperature weight 70, precipitation weight 30 and minimum separation 1,500 kilometres. Climate Twins selects Cape Town, about 8,562 kilometres away. Its standardized distance is 0.188, not an 18.8 percent match.”
+The Python ingestion pipeline downloads monthly NASA POWER T2M and PRECTOTCORR responses, validates units, coordinates, finite values and complete dates, and preserves original source metadata, retrieval timestamps and raw-response hashes. The included snapshot contains ten points and 408 complete months per point for 1991–2024. Annual temperatures are weighted by calendar days; mean daily rainfall rates are multiplied by month length before summation. NASA's `YYYY13` annual summaries are excluded from monthly observations.
 
-**1:05–1:30: Change Twins**
+Ordinary least squares estimates annual trends in per-decade units. Student-t 95% slope intervals and two-sided nominal p-values accompany magnitudes and sample sizes. Climate Twins combines mean temperature, annual precipitation and seasonal characteristics. Change Twins combines slopes and detrended annual variability. Features are standardized across the selected-period cohort and combined using adjustable group weights into an explainable Euclidean distance. Lower means closer; a distance is not a probability or percentage similarity.
 
-“Switch to Change Twins. Reykjavík becomes the closest sampled match, despite a mean-temperature difference of about 12.2 degrees Celsius. This score compares both trend estimates and year-to-year variability. It does not show that the trends are statistically equal or have the same cause.”
+At 1991–2024, temperature/precipitation weights 70/30 and minimum separation 1,500 km, Lisbon selects Cape Town as its Climate Twin (distance 0.187706; 8,562 km away), while Change Twins selects Reykjavík (0.460964; 2,951 km). Lisbon and Reykjavík differ by approximately 12.224°C in mean temperature. Their estimated temperature slopes are +0.0981 and +0.0769°C per decade, with nominal p-values 0.137 and 0.324. Neither is significant at p<0.05. Variability contributes substantially to the change distance; it is not a test of equal slopes or common causation.
 
-**1:30–1:50: uncertainty**
+Users can select locations on a map, search supported points, alter weights and dates, inspect historical/anomaly/seasonal series and accessible tables, move a historical-year slider, discover distant pairs, and export an analysis with provenance. The static React/TypeScript application uses Vite, Tailwind CSS, MapLibre GL JS, Recharts and Lucide React. Python preprocessing and independent reference checks use NumPy, Pandas and SciPy. Vitest, React Testing Library, Playwright, axe, Pytest, Ruff and Mypy support verification. No account, backend, paid AI API or live NASA runtime request is required.
 
-“Lisbon's estimated temperature trend is about +0.098 degrees Celsius per decade; Reykjavík's is +0.077. Both 95 percent intervals include zero. Neither provides nominal evidence of a nonzero trend at the five percent threshold. Similar estimates do not make either trend significant.”
+The project is useful for environmental education and exploratory investigation, not emergency, engineering or policy decisions. Only ten curated points and two variable groups are implemented. Gridded estimates may not represent local coastlines or terrain; Vancouver's returned source elevation is 565.27 m. Annual aggregation hides extremes, seasonal amplitude does not compare phase, and uncorrected temporal autocorrelation/multiple testing limit nominal significance. No causal or predictive result follows from a match. Future work could add validated locations/variables, phase-aware seasonal comparisons and autocorrelation-aware inference; these are proposals, not current capabilities.
 
-**1:50–2:00: explore and reproduce**
+Team information supplied by the owner is Team Name Team, participant William Xu. Exact personal contributions and permissions should be confirmed by the owner rather than inferred from repository ownership. No award, partner relationship or NASA endorsement is claimed. The code uses the MIT license, with NASA data and third-party materials credited separately.
 
-“Explore the histories, anomalies and seasonal cycles, change the weights or period, and export the analysis. The included real dataset makes this demonstration reproducible without contacting NASA at runtime.”
+## Use of Super Intelligence (SI)
 
-## Data and software credit text
+Yes. OpenAI Codex/large-language-model coding assistance was used for implementation, test development, documentation, presentation layout/generation scripts and submission-text preparation. The software performs deterministic analysis; independently computed NumPy/SciPy references and authentic NASA observations are used to check results. Descriptive notices and `submission/si-disclosure.json` record this assistance; `submission/team.json` records the supplied team identity, while the guide source is documented in `submission/sources/project-submission-guide.json`.
 
-Environmental estimates: NASA Prediction Of Worldwide Energy Resources (POWER), NASA Langley Research Center; meteorological source MERRA-2. Dataset `power-1991-2024-v1`, retrieved 2026-11-15 UTC. Parameter descriptions, original request URLs, retrieval timestamps and raw SHA-256 hashes are retained in the dataset. See [data sources](../docs/data-sources.md) for exact citations and [methodology](methodology-summary.md) for analysis assumptions.
+No AI-generated images, footage, audio, satellite imagery or scientific observations are used. Screenshots and the extended supporting recording capture the actual application with authentic data; scientific diagrams use native editable shapes, lines and text. Existing licensed vector-library icons appear inside the real interface. NASA branding/design elements were not inserted into generated imagery.
 
-Code: MIT License, Copyright (c) 2026 Will Xu. Selected ECC guidance retains its separate MIT notice. Runtime library licenses are reproduced in `public/THIRD_PARTY_NOTICES.txt`. Natural Earth supplies public-domain land geometry. Contributor Covenant 3.0 retains CC BY-SA 4.0 attribution. The application's MIT license does not relabel NASA data or third-party material as the author's own work.
+The owner has stated “All work is original.” The original user brief supplied the Climate Twins/Change Twins concept and solution requirements; Codex helped implement and verify that brief. This factual provenance is recorded without requesting another restatement of the idea source. The owner must personally make the portal declarations and verify applicable permissions; Terms & Conditions acceptance is not claimed.
 
-Development disclosure: AI tools assisted implementation and documentation. Scientific calculations are deterministic and tested against independent NumPy/SciPy results. No AI-generated observations are used. The project is independent and is not endorsed by NASA.
+## NASA Data
 
-## Complete in the live portal
+NASA Prediction Of Worldwide Energy Resources (POWER), NASA Langley Research Center; meteorological source MERRA-2. Monthly API v2.10.0 parameters: T2M (temperature at 2 metres, °C) and PRECTOTCORR (corrected precipitation, mm/day). Coverage: 1991–2024 at ten curated points including Vancouver and Langley; 408 months per point, 8,160 finite parameter values. No missing monthly values were imputed and no synthetic data is included.
 
-Confirm the official challenge title/year and rubric; team members and contributor permissions; final repository/PR or release link; any required demonstration/video URL and duration; source-credit fields; license selections; AI-assistance declarations; and the current submission deadline/timezone. None of these portal-specific requirements, team details or submission actions is asserted to be complete here. A deployed site is not claimed, and deployment remains a separate authorized action.
+Snapshot: `power-1991-2024-v1`, retrieved 2026-11-15 UTC. SHA-256: `bc79b9e103e350c035a9716ecd8baf6343bc18ee49acddd87cd3e12ae0a44254`. Original request URLs, retrieval timestamps, parameter descriptions, source/API headers and raw-byte hashes accompany each location in `public/data/climate.json`. These are gridded reanalysis-derived estimates, not individual city weather-station observations.
 
-## Full project description
+NASA POWER: https://power.larc.nasa.gov/
+Monthly API documentation: https://power.larc.nasa.gov/docs/services/api/temporal/monthly/
+MERRA-2: https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/
+Project provenance and methods: https://github.com/wxu2206/climate-doppelganger/tree/submission/guideline-compliance/docs
 
-See project-description.md for the complete ready-to-copy description. The application includes ten validated NASA points, both comparison modes, interactive histories, anomalies, seasonal views, uncertainty displays and reproducible exports. These are implemented; wider coverage and additional environmental variables remain future work.
+## Space Agency Partner Data and Other References
 
-## Problem statement
+No additional Space Agency Partner dataset is claimed. NASA POWER/MERRA-2 is the environmental source; Natural Earth supplies public-domain land geometry, not satellite imagery. The application's own genuine screenshots and recorded browser footage are used in submission materials; their per-file hashes and source records are retained. No external photographs, stock imagery, music or generative media are included.
 
-Average climate conditions alone do not explain how an environment is changing. Geographic distance and different temperature baselines can hide useful similarities in selected change features. At the same time, visually similar trends can be statistically uncertain. Users need an accessible way to compare both conditions and change without treating similarity as causation.
+Software: React, TypeScript, Vite, Tailwind CSS, MapLibre GL JS, Recharts, Lucide React, Python, NumPy, Pandas and SciPy, with the testing tools listed in the Detailed Project Description. Existing ECC guidance is retained under its own MIT notice. Runtime license/copyright texts are reproduced in `public/THIRD_PARTY_NOTICES.txt`; the PDF's font notice accompanies the presentation. Contributor Covenant 3.0 retains its CC BY-SA 4.0 attribution. Application code is MIT, Copyright (c) 2026 Will Xu; that license does not relabel NASA data or third-party material as the author's original code.
 
-## Proposed solution and originality
-
-The project makes a deliberate distinction between Climate Twins and Change Twins within one transparent comparison workflow. It combines a geographic explorer, adjustable feature weights, explicit statistical evidence and preserved NASA provenance. Its original contribution is the interaction and interpretation of these two questions, not a claim to have invented regression or climate analog analysis.
-
-## How the application works
-
-A Python pipeline downloads and validates monthly point responses, preserves provenance, and exports compact JSON. The browser aggregates by calendar days, fits annual regressions, derives climate/change features, standardizes across the selected ten-point cohort, and ranks geographically eligible points by weighted feature distance. The interface renders maps, charts and tables; users can change the interval/weights and download an analysis report. See methodology-summary.md for formulas and assumptions.
-
-## NASA datasets used
-
-NASA POWER monthly T2M and PRECTOTCORR, meteorological source MERRA-2, API v2.10.0. Coverage: 1991–2024, 408 months per location, ten curated points including Vancouver and Langley. Snapshot SHA-256 and full acknowledgments appear in credits.md and the dataset itself. Temperature is °C; precipitation is a mean daily rate in mm/day before annual aggregation.
-
-## Technologies used
-
-React, strict TypeScript, Vite, Tailwind CSS, MapLibre GL JS, Recharts and Lucide React; Python, NumPy, Pandas and SciPy for preprocessing and independent reference calculations. Vitest, React Testing Library, Pytest, Ruff, Mypy, Playwright and axe support validation. Hosting output is a static Cloudflare Pages-compatible site, not an account-dependent service.
-
-## Verified discoveries
-
-At 1991–2024, temperature/precipitation weights 70/30 and minimum separation 1,500 km, Lisbon's Climate Twin is Cape Town (distance 0.187706; 8,562 km away), whereas its Change Twin is Reykjavík (0.460964; 2,951 km). Lisbon and Reykjavík differ by 12.2239°C in mean temperature. Their temperature slope estimates are +0.0981 and +0.0769°C/decade, with nominal p-values 0.137 and 0.324. Neither is significant at 0.05. Variability contributes substantially to the change distance, which is not a test of equal slopes or shared causation.
-
-## Real-world applications
-
-Students and educators can explore environmental patterns and learn how uncertainty affects interpretation. Researchers could use the interface as an exploratory starting point for more rigorous comparison, not as a substitute for attribution analysis, forecasting or site-specific decisions. No measured educational, policy or research impact is claimed.
-
-## Limitations
-
-Only ten curated points and two variable groups are included. Gridded reanalysis estimates may poorly represent local terrain/coasts; Vancouver's returned source elevation is 565.27 m. Annual aggregation hides extremes. Seasonal amplitude does not compare phase across hemispheres. OLS assumptions, autocorrelation and multiple comparisons limit nominal significance. Distances depend on the cohort, interval, features and weights. No causal or predictive inference is established.
-
-## Future development
-
-Add independently validated locations/variables, autocorrelation-aware inference, phase-aware seasonal analysis and further accessibility/browser coverage. These are proposed improvements, not available features.
-
-## Team contributions
-
-[OWNER INPUT REQUIRED: actual team member names, roles, contributions, permissions and any required declarations.] Do not infer a participant's role from the repository owner or copyright notice.
-
-## Open-source licensing and attribution
-
-Application code uses MIT, Copyright (c) 2026 Will Xu. Third-party dependencies, ECC guidance, Contributor Covenant and Natural Earth retain their respective notices; NASA data is acknowledged separately and not relabelled as original application code. See credits.md and public/THIRD_PARTY_NOTICES.txt.
-
-## AI-assisted development disclosure
-
-AI coding tools assisted application implementation, tests and documentation. Deterministic calculations were checked against independent NumPy/SciPy results and authentic observations. No AI-generated images, footage, satellite data or scientific measurements are included. Existing licensed vector library icons appear only as part of the real interface. The owner should adapt this factual disclosure to the portal's verified question.
-
-## Source code link
-
-https://github.com/wxu2206/climate-doppelganger (public repository, verified by GitHub API).
-
-## Live demonstration link
-
-No verified live deployment URL is available. Supply one only after an authorized deployment and HTTPS/browser verification; see deployment.md.
-
-## Video or presentation link
-
-The actual artifacts are presentation/climate-doppelganger.pptx, presentation/climate-doppelganger.pdf and video/climate-doppelganger.mp4 in this package. Repository links become public when this branch is pushed; the final checklist records the PR. No external video-hosting URL has been published. [OWNER ACTION: upload the approved media or use verified repository artifact links according to the live portal's rules.]
-
-### Verified repository artifact URLs
-
-- Presentation: https://github.com/wxu2206/climate-doppelganger/blob/submission/preparation/submission/presentation/climate-doppelganger.pptx
-- PDF: https://github.com/wxu2206/climate-doppelganger/blob/submission/preparation/submission/presentation/climate-doppelganger.pdf
-- Actual recording: https://github.com/wxu2206/climate-doppelganger/blob/submission/preparation/submission/video/climate-doppelganger.mp4
-
-These reference the published submission-preparation branch, not a deployed application or external video host. Confirm that the portal accepts repository downloads before using them as submission links.
+Natural Earth terms: https://www.naturalearthdata.com/about/terms-of-use/
+ECC source: https://github.com/affaan-m/ECC
+Project credits, image provenance and dependency notices: https://github.com/wxu2206/climate-doppelganger/tree/submission/guideline-compliance/submission
+AI/SI assistance is disclosed above and in package metadata. The project is independent and not endorsed by NASA. The owner must confirm any applicable third-party permissions and original-work declaration in the actual portal.
