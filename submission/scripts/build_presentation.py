@@ -226,27 +226,29 @@ text(
     "Mean temperature differs by 12.2°C\nbetween Lisbon and Reykjavík.",
     42,
     280,
-    876,
-    24,
+    510,
+    22,
     WHITE,
     True,
 )
 text(
-    "1991–2024 · Temperature weight 70 · Precipitation 30 · Minimum separation 1,500 km",
+    "1991–2024 · Temperature weight 70 · Precipitation 30\nMinimum separation 1,500 km",
     42,
-    365,
-    876,
-    14,
+    355,
+    510,
+    12,
     MUTED,
 )
 text(
     "Distances are cohort-dependent feature differences, not probabilities or percentages. Change ranking includes variability, not just slopes.",
     42,
-    401,
-    876,
-    19,
+    410,
+    510,
+    15,
     MINT,
 )
+text("Actual temperature histories", 590, 280, 330, 12, MUTED)
+image("05-temperature.png", 590, 305, 330, 160)
 finish()
 
 start("Similar estimates. Honest uncertainty.", "05 / Scientific evidence")
@@ -286,8 +288,8 @@ text(
     17,
     MUTED,
 )
-text("+0.098°C/decade\n95% CI [−0.033, +0.229]", 685, 160, 232, 14, MINT)
-text("+0.077°C/decade\n95% CI [−0.079, +0.233]", 685, 242, 232, 14, BLUE)
+text("+0.098°C/decade\n95% CI [−0.033, +0.229]", 685, 160, 232, 16, MINT)
+text("+0.077°C/decade\n95% CI [−0.079, +0.233]", 685, 242, 232, 16, BLUE)
 for tick in [-0.1, 0, 0.1, 0.2]:
     text(f"{tick:+.1f}", px(tick) - 10, 296, 55, 10, MUTED)
 finish()

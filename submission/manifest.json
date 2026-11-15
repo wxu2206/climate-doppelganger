@@ -29,13 +29,13 @@
     },
     {
       "path": "presentation/climate-doppelganger.pdf",
-      "bytes": 211124,
-      "sha256": "74577b43d55268133e2a2e10fe30765c2d5ccd908853e1f9b59e3b965b7d4940"
+      "bytes": 249468,
+      "sha256": "027d8428bdbe3f777697744e251015999790faee92a7dafab6268fc735a73e07"
     },
     {
       "path": "presentation/climate-doppelganger.pptx",
-      "bytes": 203471,
-      "sha256": "f616f0b74ec0010f466c0fbef304f7f452ebde16391a6920d020c264304dd733"
+      "bytes": 237214,
+      "sha256": "5a0c94eedad14fe6d425d205912e2f851e7d88d8b5eb59ee98ad5a2c7f65f4f0"
     },
     {
       "path": "presentation/font-license.txt",
@@ -119,8 +119,8 @@
     },
     {
       "path": "scripts/build_presentation.py",
-      "bytes": 10674,
-      "sha256": "d1c1752df1c9466efa80fe8b695610dbbaa7cd11103296d43449982c634e7938"
+      "bytes": 10783,
+      "sha256": "79816dc3e15765020eb1eda6e950e9f2edb52f3e43aade87a92f1f88c84cec06"
     },
     {
       "path": "scripts/capture.mjs",
@@ -129,8 +129,8 @@
     },
     {
       "path": "scripts/layout-check.json",
-      "bytes": 12538,
-      "sha256": "f0079ff78b6a4e16522ece1ec685dc3c9e261ec804089a5873de5c6b10fa5226"
+      "bytes": 12581,
+      "sha256": "0adedbc88e58d1cda991005d61c47dc68af0b5d9d15c0ff681d53ba4b3a2776d"
     },
     {
       "path": "scripts/recording-guide.md",
@@ -139,8 +139,8 @@
     },
     {
       "path": "submission-answers.md",
-      "bytes": 12762,
-      "sha256": "1e1e9ac6240a0ea4848a13abcad5f0bc88beac972dadd8860e63fe47af57f71e"
+      "bytes": 12822,
+      "sha256": "302edc3857557622f7716cb1d3333f3429fc63841867b846dc054f856c4930c3"
     },
     {
       "path": "video/climate-doppelganger.mp4",

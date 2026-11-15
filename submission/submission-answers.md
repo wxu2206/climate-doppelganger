@@ -122,8 +122,8 @@ The actual artifacts are presentation/climate-doppelganger.pptx, presentation/cl
 
 ### Verified repository artifact URLs
 
-- Presentation: https://github.com/wxu2206/climate-doppelganger/blob/2193922/submission/presentation/climate-doppelganger.pptx
-- PDF: https://github.com/wxu2206/climate-doppelganger/blob/2193922/submission/presentation/climate-doppelganger.pdf
-- Actual recording: https://github.com/wxu2206/climate-doppelganger/blob/2193922/submission/video/climate-doppelganger.mp4
+- Presentation: https://github.com/wxu2206/climate-doppelganger/blob/submission/preparation/submission/presentation/climate-doppelganger.pptx
+- PDF: https://github.com/wxu2206/climate-doppelganger/blob/submission/preparation/submission/presentation/climate-doppelganger.pdf
+- Actual recording: https://github.com/wxu2206/climate-doppelganger/blob/submission/preparation/submission/video/climate-doppelganger.mp4
 
-These reference the published package commit, not a deployed application or external video host. Confirm that the portal accepts repository downloads before using them as submission links.
+These reference the published submission-preparation branch, not a deployed application or external video host. Confirm that the portal accepts repository downloads before using them as submission links.

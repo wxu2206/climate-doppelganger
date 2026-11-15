@@ -448,28 +448,38 @@
       "bounds": [
         42,
         280,
-        876,
-        70.4
+        510,
+        65.2
       ]
     },
     {
       "slide": 5,
-      "text": "1991\u20132024 \u00b7 Temperature weight 70 \u00b7 Precipitation 30 \u00b7 Minimum separation 1,500 km",
+      "text": "Minimum separation 1,500 km",
       "bounds": [
         42,
-        365,
-        876,
-        26.2
+        355,
+        510,
+        39.2
       ]
     },
     {
       "slide": 5,
-      "text": "Change ranking includes variability, not just slopes.",
+      "text": "not just slopes.",
       "bounds": [
         42,
-        401,
-        876,
-        57.4
+        410,
+        510,
+        66.5
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "Actual temperature histories",
+      "bounds": [
+        590,
+        280,
+        330,
+        23.6
       ]
     },
     {
@@ -589,7 +599,7 @@
         685,
         160,
         232,
-        44.4
+        49.6
       ]
     },
     {
@@ -599,7 +609,7 @@
         685,
         242,
         232,
-        44.4
+        49.6
       ]
     },
     {
