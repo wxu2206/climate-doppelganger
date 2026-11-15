@@ -1,13 +1,13 @@
 # Final submission-readiness review
 
-The authentic data and application are verified for a reproducible demonstration and pull-request review. **Official 2026 challenge compliance is not certified:** the supplied challenge and resources pages return HTTP 503, so their exact wording, eligibility, license requirements, form limits, media requirements and deadline cannot be confirmed. The assessment below separates implemented capability from official-rule verification.
+The authentic data and application have a verified engineering baseline for a reproducible demonstration. This guideline-compliance pass preserves them. The owner has now supplied the Project Submission Guide, which resolves the eight form fields, slide/video limits, team-identification requirements, SI disclosure rules and applicable submission window. The supplied text has not been independently authenticated against a reachable official page; prior challenge/resources requests returned HTTP 503. Challenge-specific additions, legal terms, participant acceptance and final portal submission remain unverified.
 
 ## Challenge alignment
 
 Official challenge URL supplied in the project brief:
 https://www.spaceappschallenge.org/2026/challenges/earth-system-trend-detective/
 
-Both that page and https://www.spaceappschallenge.org/resources/ returned HTTP 503 in this final review. No older challenge text, third-party summary or inferred rule was substituted as 2026 authority.
+Both that page and https://www.spaceappschallenge.org/resources/ returned HTTP 503 during the earlier official-source review. The owner-supplied Project Submission Guide is the working general submission source, clearly distinguished from independently retrieved challenge wording. No older challenge text or inferred scientific requirement is substituted as 2026 authority.
 
 | Capability identified in the brief | Verified implementation                                                                                                | Official 2026 alignment                                                            |
 | ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
@@ -42,16 +42,15 @@ Lisbon and Reykjavík's temperature intervals include zero. Similar positive est
 - NASA's official [Images and Media Usage Guidelines](https://www.nasa.gov/nasa-brand-center/images-and-media/) returned HTTP 200. They call for source acknowledgment and prohibit implied endorsement, with separate protections for NASA identifiers and third-party materials. The project uses its own interface and no NASA logo or generative NASA imagery; non-endorsement text is present. This general guidance is not substituted for unavailable 2026 submission rules or dataset-specific legal certification.
 - Official POWER [data FAQ](https://power.larc.nasa.gov/docs/faqs/data/) returned HTTP 200 and confirms community-specific API units and distribution guidance. The original responses and [monthly API documentation](https://power.larc.nasa.gov/docs/services/api/temporal/monthly/) remain the primary data/schema evidence. No invented dataset DOI or publication citation is supplied.
 
-This is an engineering attribution review, not a legal opinion. Submission-specific licensing/AI-disclosure/media rules still require the current official portal.
+This is an engineering attribution review, not a legal opinion. The supplied guide requires credits and SI assistance disclosure in descriptive text and code/data metadata. Codex assisted implementation, tests, documentation and presentation layout/generation; authentic NASA observations, captured screenshots and browser footage are not SI-generated. No generative images, video or audio are used. Package metadata and final media checks are part of the current guideline review. The original user brief supplied the Climate Twins/Change Twins concept and solution requirements. Applicable permissions, current legal terms and personal original-work declarations remain the owner's responsibility; no extra idea-origin restatement is needed.
 
 ## Local checks and hosted CI
 
-Review artifact: [draft PR #2](https://github.com/wxu2206/climate-doppelganger/pull/2). The authentic snapshot is committed on `feat/climate-explorer`; the PR checks are authoritative for its latest head revision.
+The earlier application review and [draft PR #2](https://github.com/wxu2206/climate-doppelganger/pull/2) are historical evidence. The owner reported that [hosted Actions for commit `e79b1ff`](https://github.com/wxu2206/climate-doppelganger/actions/runs/43672371721) passed. They do not establish hosted success for the new `submission/guideline-compliance` revision.
 
-The final local verification runs the data gate, full frontend suite, strict typecheck, ESLint, production build, full Python suites plus Ruff/Mypy/dependency consistency, and the full Chromium/browser/accessibility suite. See the final PR check results for the exact committed revision, rather than assuming local checks establish hosted success. The earlier commit `78df8ad` had successful hosted runs, but those runs did not include the then-staged authentic dataset:
-https://github.com/wxu2206/climate-doppelganger/actions/runs/43670480470
+The prior local baseline passed 39 frontend tests, 18 Python tests, 11 Chromium/browser tests including tested accessibility states, the authentic-data gate, strict types, ESLint, production build, Ruff, Mypy and dependency consistency. The current local rerun also passed: 39 frontend tests, 18 Python tests on local Python 3.12.14, and 11 browser tests in 49.5 s including authentic-data 390/768/1440 px states and axe scans. Data gate, strict types, ESLint, production build, Ruff, Mypy, pip consistency and npm audit (zero known vulnerabilities) passed. Artifact/public-link and hosted validation remain tracked separately in [the final checklist](../submission/final-checklist.md); no new hosted result is claimed until the final commit is tested.
 
-The workflow uses Node 24/npm ci and Python 3.11/3.13, pinned action SHAs, read-only permissions, bounded jobs and cancellation. It uses the included data without live NASA access. No deployment job exists. The final review commit includes the authentic dataset, regression fixtures and source attribution; publishing that feature commit permits Actions to test the current revision. A draft PR is a review artifact, not a merge or an official Space Apps submission.
+The workflow uses Node 24/npm ci and Python 3.11/3.13, pinned action SHAs, read-only permissions, bounded jobs and cancellation. It uses committed authentic data without live NASA requests and has no deployment job. Review the exact final revision's PR checks; older green runs and local checks cannot substitute for current hosted evidence. A PR is a review artifact, not a merge or an official Space Apps submission.
 
 ## Cloudflare Pages compatibility
 
@@ -59,18 +58,32 @@ Verified static build configuration: **Node 24**, command **`npm run build`**, o
 
 The output includes `index.html`, local JS/CSS, MapLibre worker, climate data, Natural Earth geometry, `_headers`, and complete runtime notices. Current navigation uses hashes, so an SPA rewrite is unnecessary. The exact Pages CSP was exercised in the earlier local production-bundle smoke check without errors. The existing large lazy MapLibre chunk advisory remains a performance limitation, not a failed build. This review does not deploy or establish actual Pages target acceptance.
 
+## Supplied-guide submission route
+
+Owner-supplied team information is **Team Name Team — William Xu**, **Universal Event**, residence timezone **America/Vancouver**. The deadline on that confirmed Universal basis is **2026-11-15 23:59 America/Vancouver = 2026-11-16 06:59 UTC**. The UTC conversion uses IANA `America/Vancouver` tzdata 2026b (UTC−07:00 on this date), rather than the older seasonal offset. The applicable portal-local cutoff is authoritative. Accepted-participant status is still an owner check.
+
+Use the [seven-slide PDF](https://github.com/wxu2206/climate-doppelganger/blob/submission/guideline-compliance/submission/presentation/climate-doppelganger.pdf) as the required Project Demo. The supplied guide permits up to seven slides including the title/intro or video no longer than 30 seconds. The 100.64-second video is **EXTENDED SUPPORTING material only**, excluded from that field. No short video or deployment is necessary for the selected route. The [public repository](https://github.com/wxu2206/climate-doppelganger) is the Final Project; the [review branch](https://github.com/wxu2206/climate-doppelganger/tree/submission/guideline-compliance) holds this package.
+
+The final deck must show the supplied team/member names and **Be An Earth System Trend Detective!**, use English and public anonymous links, preserve source/SI attribution and contain no minor's likeness. Current-pass artifact and public-link checks remain recorded separately rather than inferred from older outputs. [Exact-field answers and the slide handoff](submission-form.md) supersede the earlier suggested two-minute video script.
+
 ## Submission checklist
 
-- [x] Preserve application/ECC/source-data hashes and existing tests.
-- [x] Pass the authentic-data gate and independently reproduce the demonstration.
-- [x] Distinguish similarity, significance, slope equivalence and causation.
-- [x] Review licenses/citations and retain the missing embedded MIT notice.
-- [x] Prepare [project description, methodology summary and spoken demo](submission-form.md).
-- [x] Prepare a static Pages-compatible build and review-only PR contents.
-- [ ] Confirm exact official 2026 challenge requirements once the page is available.
-- [ ] Check the latest review commit's hosted Actions results in the draft PR; older green runs are insufficient.
-- [ ] Human review of submission copy, contributor attribution and final repository/demo links.
-- [ ] Supply any portal-required video/media, declarations, eligibility details and deadline confirmation.
-- [ ] Complete the official portal submission; no submission or deployment has been performed.
+- [x] Preserve application/ECC/source data and existing test coverage.
+- [x] Record prior successful data gate and independently reproduced demonstration.
+- [x] Distinguish similarity, significance, slope equivalence, causation and prediction.
+- [x] Review licenses/citations and retain embedded third-party notices.
+- [x] Prepare English copy under all eight supplied-guide field names.
+- [x] Select the seven-slide PDF, exclude the long supporting video from the required demo, and document the confirmed Universal deadline.
+- [x] Record the owner's original-work statement and original concept brief, without inferring accepted status, authenticated permissions or Terms & Conditions acceptance.
+- [x] Pass current local application/data/browser/accessibility checks; retain current results separately from historical/hosted evidence.
+- [x] Complete metadata/layout/media checks and artifact manifest; all seven pages, twelve image hashes and full video decoding pass. Public-link checks require publication.
+- [ ] Publish/review the final revision and check its exact hosted Actions results; older green runs are insufficient.
+- [ ] Owner recheck final PDF/repository links in a private browser and review all seven slides in the final viewer.
+- [ ] Confirm every participant's accepted status at the same event, permissions, current portal terms/limits and any live challenge-specific additions.
+- [ ] Personally accept portal declarations, click **Submit for Judging** before the confirmed deadline, and verify success. Saving is not submission.
 
-The browser/accessibility evidence covers tested states, not complete WCAG certification. Statistical limitations and Vancouver's 565.27 m source elevation remain visible in the methodology and demo guide. Source links targeting `main` become available there only after the normal review/merge process; the feature-branch files are available during PR review.
+The [package checklist](../submission/final-checklist.md) is the current handoff for final-pass evidence and owner actions. Chromium/accessibility coverage establishes tested states, not complete WCAG or all-browser certification. Statistical limitations and Vancouver's 565.27 m source elevation remain documented. No merge, deployment, official submission, award or NASA endorsement is claimed.
+
+Source/disclosure records: [owner-supplied guide](../submission/sources/project-submission-guide.json), [team/event facts](../submission/team.json), [SI assistance](../submission/si-disclosure.json). The guide source is not an independently authenticated live-page response.
+
+Final local production preview checks at 390/768/1440 px also reproduce both Lisbon matches, with zero page errors, external runtime requests, horizontal overflow or tested axe violations. [Structured evidence](../submission/verification.json) and the [read-only package gate](../submission/scripts/check_package.py) preserve these checks separately from hosted CI and official portal acceptance.

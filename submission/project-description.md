@@ -12,4 +12,4 @@ Future work could add more validated locations and variables, richer seasonal co
 
 Source: https://github.com/wxu2206/climate-doppelganger
 
-No verified deployed website is claimed. The exact official 2026 challenge and submission requirements remain to be confirmed; see requirements.md.
+No verified deployed website is claimed. The seven-slide demo and form copy follow the owner-supplied 2026 Project Submission Guide; its provenance and remaining human checks are recorded in requirements.md. Live official challenge and resources pages still return HTTP 503.

@@ -20,6 +20,12 @@ registerFont(TTFont("Deck-Bold", "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bo
 from reportlab.lib.utils import ImageReader
 
 ROOT = Path(__file__).resolve().parents[1]
+TEAM = json.loads((ROOT / "team.json").read_text())
+SI_NOTICE = (
+    "OpenAI Codex assisted code, tests, docs and slide layout. "
+    "Authentic NASA data; real browser captures; no generative media. "
+    "See submission/si-disclosure.json."
+)
 assert (
     hashlib.sha256((ROOT.parent / "public/data/climate.json").read_bytes()).hexdigest()
     == "bc79b9e103e350c035a9716ecd8baf6343bc18ee49acddd87cd3e12ae0a44254"
@@ -34,10 +40,18 @@ MUTED = "#AFBFCC"
 MINT = "#6EE7D5"
 BLUE = "#A8BDFF"
 prs = Presentation()
+prs.core_properties.title = "Climate Doppelgänger — " + TEAM["team_name"]
+prs.core_properties.author = TEAM["team_name"]
+prs.core_properties.subject = TEAM["challenge"] + "; " + SI_NOTICE
+prs.core_properties.keywords = "NASA POWER, MERRA-2, SI-assisted development, authentic observations"
+prs.core_properties.comments = SI_NOTICE
 prs.slide_width = Inches(W / 72)
 prs.slide_height = Inches(H / 72)
 pdf = canvas.Canvas(str(OUT / "climate-doppelganger.pdf"), pagesize=(W, H))
 pdf.setTitle("Climate Doppelgänger — Different Worlds. The Same Story.")
+pdf.setAuthor(TEAM["team_name"])
+pdf.setSubject(TEAM["challenge"] + "; " + SI_NOTICE)
+pdf.setKeywords("NASA POWER, MERRA-2, SI-assisted development, authentic observations")
 layout = []
 
 
@@ -143,6 +157,7 @@ def finish():
         MUTED,
     )
     text(f"{len(prs.slides):02}", 890, 505, 30, 10, MINT)
+    text("SI-assisted implementation and layout; authentic NASA data and browser captures", 42, 520, 820, 7, MUTED)
     pdf.showPage()
 
 
@@ -151,12 +166,15 @@ text("Different Worlds.\nThe Same Story.", 42, 120, 365, 34, MINT, True)
 text(
     "Discover distant places with similar climate conditions — or selected patterns of change.",
     42,
-    250,
+    240,
     335,
-    21,
+    19,
 )
 image("01-desktop.png", 410, 115, 510, 335)
-text("Authentic NASA POWER data. Transparent comparisons.", 42, 454, 870, 16, MUTED)
+text(TEAM["challenge"], 42, 352, 350, 15, MUTED, True)
+text(TEAM["team_name"], 42, 407, 350, 16, MINT, True)
+text(" · ".join(member["name"] for member in TEAM["members"]), 42, 433, 350, 15, WHITE)
+text("Authentic NASA POWER data. Transparent comparisons.", 42, 475, 870, 15, MUTED)
 finish()
 
 start("A similar climate is not the same change", "01 / The problem")
@@ -313,7 +331,7 @@ text(
 )
 text("github.com/wxu2206/climate-doppelganger", 42, 315, 876, 24, WHITE, True)
 text(
-    "Source code: MIT, © 2026 Will Xu. NASA POWER / MERRA-2 data credit retained.\nNo live site is claimed. Official 2026 submission rules still require confirmation.",
+    "Source code: MIT, © 2026 Will Xu. NASA POWER / MERRA-2 data credit retained.\nSeven-slide demo; public source and data. Portal submission remains the team's responsibility.",
     42,
     382,
     876,

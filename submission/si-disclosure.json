@@ -1,0 +1,20 @@
+{
+  "tool": "OpenAI Codex",
+  "assistance": {
+    "code_and_tests": "Assisted implementation, scientific test development, debugging and review; deterministic calculations independently checked with NumPy/SciPy.",
+    "data_processing_code": "Assisted NASA download, validation, aggregation and export code; no invented observations or silent imputation.",
+    "documentation": "Assisted repository documentation, submission drafts and scientific explanations.",
+    "presentation": "Assisted editable text, native scientific diagrams and reproducible layout code; real application screenshots embedded.",
+    "capture_tooling": "Assisted automation scripts that captured actual application interactions; footage is not generative video."
+  },
+  "generated_nasa_observations": false,
+  "generated_screenshots": false,
+  "generated_video_footage": false,
+  "generated_audio": false,
+  "generative_images_used": false,
+  "nasa_branding_generated_or_modified": false,
+  "observations": "Authentic NASA POWER/MERRA-2 monthly estimates; dataset hash and source provenance retained unchanged.",
+  "media": "Twelve real browser screenshots and silent browser screen recording; no people, voice, music or external photography.",
+  "idea_provenance": "The owner supplied the Climate Twins / Change Twins project concept and implementation brief. The owner confirmed 'All work is original'; personal portal declarations remain the owner's responsibility.",
+  "visible_disclosure": "Slide footers and submission credits disclose SI-assisted implementation and layout. Authentic screenshots/footage are not mislabelled as SI-generated media."
+}

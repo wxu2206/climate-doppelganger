@@ -2,7 +2,7 @@
 
 **Different worlds. The same story.** A NASA Space Apps Challenge 2026 project exploring geographically distant places with similar climates—or similar environmental changes despite different climates.
 
-> **Data status:** The application now includes authentic NASA POWER observations for 10 locations, 1991–2024. The submission data gate passes, and Climate Twins/Change Twins are checked against the real snapshot and independent SciPy calculations. The official 2026 challenge page returned HTTP 503, so final challenge compliance and submission remain pending.
+> **Data status:** Authentic NASA POWER observations cover 10 locations, 1991–2024. The data gate passes, and both matching modes reproduce independent SciPy calculations. The submission package has been checked against the project submission guide supplied by the owner; live official pages still return HTTP 503. Registration, personal declarations and final portal submission remain human actions.
 
 ## The problem
 
@@ -76,7 +76,7 @@ npm run build
 .venv/bin/python -m pip check
 ```
 
-Browser tests use explicit synthetic fixtures and no live NASA call:
+Browser tests use explicitly labelled synthetic fixtures and the committed authentic snapshot, without live NASA calls:
 
 ```bash
 npx --no-install playwright install chromium
@@ -85,7 +85,7 @@ npm run test:e2e
 CHROMIUM_PATH=/usr/bin/chromium npm run test:e2e
 ```
 
-Tests verify calculations, validation failures, changing modes/weights/periods, search, map rendering, charts, discovery, timeline, modal keyboard behavior and responsive width. Passing fixture tests does not validate real NASA observations. GitHub Actions is configured for Node 24 and Python 3.11/3.13; hosted Actions results have not been verified. See [current verification evidence](docs/authentic-data-verification.md).
+Tests verify calculations, validation failures, changing modes/weights/periods, search, map rendering, charts, discovery, timeline, modal keyboard behavior and responsive width. Passing fixture tests alone does not validate real NASA observations. GitHub Actions is configured for Node 24 and Python 3.11/3.13; revision-specific evidence is recorded in the [submission checklist](submission/final-checklist.md). See [authentic-data verification](docs/authentic-data-verification.md).
 
 ## Architecture and deployment
 
@@ -109,8 +109,8 @@ See [the network diagnosis](docs/network-diagnosis.md) and [portable local acqui
 
 ## Submission review
 
-See the [final readiness checklist](docs/submission-readiness.md), [submission-form drafts](docs/submission-form.md), and [review description](docs/pull-request.md). Official 2026 challenge wording and portal-specific requirements still require confirmation; local verification is separate from hosted CI and an official submission.
+See the [final readiness checklist](docs/submission-readiness.md), [submission-form drafts](docs/submission-form.md), and [review description](docs/pull-request.md). The owner's supplied guide establishes the demo limits, form fields and submission schedule used by this package; it has not been independently authenticated against the unavailable live 2026 pages. Local verification, hosted CI and official submission are separate states.
 
 ## Submission package
 
-The [submission package](submission/README.md) contains the editable seven-slide presentation, matching PDF, authentic application screenshots, real browser recording, submission text, attribution, and deployment handoff. See [official-rule uncertainties](submission/requirements.md) and the [human-action checklist](submission/final-checklist.md). No AI-generated images or synthetic fixture screenshots are used in these materials.
+The [submission package](submission/README.md) contains the required [seven-slide Project Demo](submission/presentation/climate-doppelganger.pdf), editable PPTX, authentic application screenshots, extended supporting recording, submission text, attribution, and deployment handoff. Team: **Team Name Team**; member: **William Xu**. The supplied Universal Event deadline is November 15, 2026, 11:59 p.m. America/Vancouver (November 16, 06:59 UTC). See [rule evidence](submission/requirements.md) and the [human-action checklist](submission/final-checklist.md). [SI-development disclosure](submission/si-disclosure.json) identifies Codex-assisted code, tests, documents and layout; NASA observations and captured media are authentic, with no generative imagery.

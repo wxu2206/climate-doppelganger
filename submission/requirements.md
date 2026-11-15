@@ -1,33 +1,58 @@
-# Official requirements verification
+# Submission requirements and evidence
 
-Checked 2026-11-14 America/Vancouver (2026-11-15 UTC). The challenge named in the brief is “Be An Earth System Trend Detective!” The exact official 2026 wording remains unverified.
+Updated 2026-11-15 UTC against the **Project Submission Guide text supplied by the owner in this conversation**. The live challenge/resources pages previously returned HTTP 503. The pasted guide is now the working requirements source; it has not been independently authenticated against a reachable official page. The [source record](sources/project-submission-guide.json) retains the supplied-text SHA-256 and source limitations. Challenge-specific scientific wording, additional legal terms and any form character limits still require the live portal.
 
-## Primary-source evidence
+## Confirmed owner information
 
-- https://www.spaceappschallenge.org/2026/challenges/earth-system-trend-detective/ — HTTP 503 during this package pass.
-- https://www.spaceappschallenge.org/resources/ — HTTP 503 during this package pass. No repeated access-denied loops or older-year rules were substituted.
-- https://www.nasa.gov/nasa-brand-center/images-and-media/ — HTTP 200 in the preceding final review. General guidance calls for attribution, avoids implied endorsement, and protects NASA identifiers separately. It is not a substitute for 2026 competition rules.
-- https://power.larc.nasa.gov/docs/services/api/temporal/monthly/ and https://power.larc.nasa.gov/docs/faqs/data/ — verified in the acquisition/final review. The actual API responses retain source, units, coverage and retrieval metadata; see docs/data-sources.md.
-- GitHub repository API in this pass confirms the source repository is **public**, default branch main, and no homepage URL is configured. This verifies accessibility, not a competition eligibility rule.
+- Team: **Team Name Team**.
+- Participant name supplied: **William Xu**.
+- Registration category: **Universal Event**.
+- Team Owner's residence timezone: **America/Vancouver**, confirmed by the owner.
+- Owner statement: **“All work is original.”** This records that statement; it does not click or replace any portal declaration, verify participant acceptance, or authenticate underlying content permissions. The original user brief supplied the Climate Twins/Change Twins concept and implementation requirements; Codex assisted its implementation.
 
-## Requirements matrix
+## Working guide requirements
 
-| Requested check                           | Verified status / necessary human action                                                                                          |
-| ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| Challenge objectives and judging criteria | Exact 2026 rubric unverified. Implemented capabilities are mapped provisionally in docs/submission-readiness.md.                  |
-| Eligibility                               | Unverified; team must confirm age, location, participation category and applicable rules in the official portal.                  |
-| Deadline and timezone                     | Unverified. No date is invented. Confirm with the official event and, separately, any local organizer.                            |
-| Required project information and links    | Exact fields unverified; ready-to-copy broad coverage is in submission-answers.md.                                                |
-| Mandatory demonstration video             | Unverified. A real recording is provided as preparation, not evidence that a video is required.                                   |
-| Video duration                            | Unverified. The supplied recording is a rehearsal, not certified within an official limit.                                        |
-| Presentation format/slide limits          | Unverified. Seven slides were chosen per the user's brief, not an official rule.                                                  |
-| Open-source licensing                     | Current code is MIT, with separate third-party notices. The 2026 required license choices are unverified.                         |
-| NASA citations                            | NASA POWER/MERRA-2 metadata, requests, hashes and timestamps are preserved. Any event-specific citation field remains unverified. |
-| AI-assistance disclosure                  | Exact 2026 requirement unverified. A truthful disclosure is supplied; no generative imagery was used.                             |
-| Team members/contributors                 | Actual names, roles, permissions and declarations require the owner; no invented members.                                         |
-| Project/external attribution              | Existing software/data notices audited; each submission screenshot has a provenance record.                                       |
-| Source-code accessibility                 | Public GitHub repository verified. Any event-specific access/deadline/freeze rule remains unverified.                             |
-| Other media/forms                         | Unverified; confirm live portal fields before submission.                                                                         |
-| Local-event variations                    | No local rule is treated as a global requirement. Confirm any relevant local requirements separately.                             |
+| Requirement from supplied guide                                                                                 | Package status / remaining action                                                                                                                                                                                                                                                                                                 |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Project submission opens November 14, 2026 at 09:00 in the applicable local timezone                            | For the confirmed Universal residence timezone: **2026-11-14 09:00 America/Vancouver = 2026-11-14 16:00 UTC**.                                                                                                                                                                                                                    |
+| Submit by November 15, 2026 at 23:59 in the applicable local timezone                                           | Confirmed Universal basis: **2026-11-15 23:59 America/Vancouver = 2026-11-16 06:59 UTC**. Saving progress alone is insufficient.                                                                                                                                                                                                  |
+| Local-event schedules can differ for local judging/awards                                                       | Do not substitute a local judging schedule for the Universal submission deadline.                                                                                                                                                                                                                                                 |
+| All members must be accepted participants at the same event                                                     | Owner supplied Universal registration and one name; accepted participant status remains an owner check. No acceptance is inferred.                                                                                                                                                                                                |
+| Required Project Demo: up to seven slides including title/intro, OR video no longer than 30 seconds             | **Choose the seven-slide PDF** as the required demo. The 100.64-second recording exceeds the video-demo limit and is supporting material only. Do not put its link in the Project Demo field.                                                                                                                                     |
+| Deck must identify team, team members and selected challenge                                                    | Required text: **Team Name Team**, **William Xu**, **Be An Earth System Trend Detective!** Final artifact checks must confirm all three and the seven-slide count.                                                                                                                                                                |
+| Project/form content and slides in English                                                                      | Package copy and deck are English; proper names such as Reykjavík retain their spelling. A non-English spoken demo would require English subtitles, but none is used here.                                                                                                                                                        |
+| Judging criteria: Impact, Creativity, Validity, Relevance, Presentation                                         | Description explains educational/exploratory use, two-mode concept, authentic data/statistical caveats, environmental comparison, and readable screenshots/diagrams. No award or score is claimed.                                                                                                                                |
+| At least one NASA data/resource for Global Award eligibility                                                    | Authentic NASA POWER/MERRA-2 data is included and credited. This meets that resource condition, not overall eligibility by itself.                                                                                                                                                                                                |
+| Demo and final-project links must be public without login, permissions or registration                          | GitHub is expressly permitted by the guide. Use the public PDF and repository links; anonymous-access checks must be completed on the final branch assets. A deployed website is not required.                                                                                                                                    |
+| Portal accepts image uploads/copy-paste only: JPG/PNG/GIF, up to 10 MB                                          | Selected screenshots are PNGs below 10 MB. Documents/videos must be linked from a public host, not uploaded as files to the portal.                                                                                                                                                                                               |
+| No images/video/audio or other likeness of persons under 18 in demos/final projects                             | Selected media contains the application, data charts and native diagrams; no human face, voice, photograph or avatar is included. Do not add a minor's likeness during narration/media edits.                                                                                                                                     |
+| SI use must be described; code/data must acknowledge SI assistance in descriptive text and metadata             | Factual disclosure: Codex assisted code, tests, documentation and presentation layout/generation. NASA source observations, captured screenshots and recorded browser footage are not SI-generated. The [SI disclosure metadata](si-disclosure.json), presentation metadata and supporting-video metadata record this assistance. |
+| SI should not supply the idea of how to solve the challenge                                                     | The original user brief supplied the Climate Twins/Change Twins concept and solution requirements; Codex assisted implementation, verification, documentation and presentation. The owner stated that all work is original. Underlying permissions and the portal declaration remain personal owner responsibilities.             |
+| Generated images/video require visible SI indicators; generated audio needs descriptive/metadata acknowledgment | No generative imagery, video or audio is used. Authentic screenshots/recording should not be falsely labelled as generative media. Do not add NASA logos/branding to generated content.                                                                                                                                           |
+| Credit code, text, images, data and other tools, including open/free resources                                  | NASA/source metadata, licenses, Natural Earth, Lucide/runtime notices and development assistance are documented. No partner-agency data use is invented.                                                                                                                                                                          |
+| Required form fields and final submission                                                                       | Complete the eight fields below, check the portal's Terms and Conditions and original-work boxes personally, click **Submit for Judging**, then confirm the success banner/message.                                                                                                                                               |
 
-The package is technically prepared, but official 2026 compliance cannot be certified from unavailable pages. Only a human can supply eligibility declarations, team information and final submission approval.
+The timezone conversions use current IANA `America/Vancouver` rules from tzdata **2026b**, which gives UTC−07:00 on these November 2026 dates. Do not assume the older seasonal UTC−08:00 offset. The portal's applicable **23:59 local deadline is authoritative**; verify its displayed cutoff before submitting.
+
+## Exact Project page fields
+
+1. Project Name
+2. High-Level Project Summary
+3. Link to Project Demo
+4. Link to Final Project
+5. Detailed Project Description
+6. Use of Super Intelligence (SI)
+7. NASA Data
+8. Space Agency Partner Data and Other References
+
+[Submission answers](submission-answers.md) provides English copy under those exact field names. Team identity uses the owner's supplied values; it is not inferred from a copyright notice. The guide says SI-question responses are for data collection, while visible generated-content indicators can still be seen by judges.
+
+## Human-only completion
+
+Confirm acceptance of every participant at the same Universal Event, any applicable Terms & Conditions and content permissions, and the current portal's fields/limits. The user-supplied concept provenance is already recorded; no extra restatement of that fact is required. Lock editing while working, save progress frequently, and communicate with teammates. Complete all required fields and personally agree to the Terms & Conditions/originality declaration before **Submit for Judging**. Verify the success banner; a saved draft is not a submitted project. No official submission, deadline exception or certificate eligibility is claimed by this package.
+
+The guide recommends but does not require a FortiGuard classification request for a new website. No website has been deployed or classification requested here. Source-only hosting on a public repository is an allowed final-project route in the supplied guide.
+
+Owner-supplied identity/event values are recorded in [team.json](team.json), with unverified registration acceptance kept explicit. [si-disclosure.json](si-disclosure.json) records assistance and authentic-media distinctions without claiming portal acceptance.
+
+Timezone verification: the official [IANA tzdb 2026b North America source](https://data.iana.org/time-zones/tzdb-2026b/northamerica) returned HTTP 200 on 2026-11-15 UTC and gives America/Vancouver UTC−07 for November 2026. This matches installed tzdata 2026b. The B.C. government daylight-saving page returned HTTP 503. Use the supplied guide’s local deadline; do not apply an outdated UTC−08/PST conversion.

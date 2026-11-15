@@ -37,9 +37,39 @@
       "text": "selected patterns of change.",
       "bounds": [
         42,
-        250,
+        240,
         335,
-        89.9
+        82.10000000000001
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "Be An Earth System Trend Detective!",
+      "bounds": [
+        42,
+        352,
+        350,
+        27.5
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "Team Name Team",
+      "bounds": [
+        42,
+        407,
+        350,
+        28.8
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "William Xu",
+      "bounds": [
+        42,
+        433,
+        350,
+        27.5
       ]
     },
     {
@@ -47,9 +77,9 @@
       "text": "Authentic NASA POWER data. Transparent comparisons.",
       "bounds": [
         42,
-        454,
+        475,
         870,
-        28.8
+        27.5
       ]
     },
     {
@@ -70,6 +100,16 @@
         505,
         30,
         21.0
+      ]
+    },
+    {
+      "slide": 1,
+      "text": "SI-assisted implementation and layout; authentic NASA data and browser captures",
+      "bounds": [
+        42,
+        520,
+        820,
+        17.1
       ]
     },
     {
@@ -173,6 +213,16 @@
       ]
     },
     {
+      "slide": 2,
+      "text": "SI-assisted implementation and layout; authentic NASA data and browser captures",
+      "bounds": [
+        42,
+        520,
+        820,
+        17.1
+      ]
+    },
+    {
       "slide": 3,
       "text": "02 / OUR SOLUTION",
       "bounds": [
@@ -260,6 +310,16 @@
         505,
         30,
         21.0
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "SI-assisted implementation and layout; authentic NASA data and browser captures",
+      "bounds": [
+        42,
+        520,
+        820,
+        17.1
       ]
     },
     {
@@ -383,6 +443,16 @@
       ]
     },
     {
+      "slide": 4,
+      "text": "SI-assisted implementation and layout; authentic NASA data and browser captures",
+      "bounds": [
+        42,
+        520,
+        820,
+        17.1
+      ]
+    },
+    {
       "slide": 5,
       "text": "04 / VERIFIED DISCOVERY",
       "bounds": [
@@ -500,6 +570,16 @@
         505,
         30,
         21.0
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "SI-assisted implementation and layout; authentic NASA data and browser captures",
+      "bounds": [
+        42,
+        520,
+        820,
+        17.1
       ]
     },
     {
@@ -673,6 +753,16 @@
       ]
     },
     {
+      "slide": 6,
+      "text": "SI-assisted implementation and layout; authentic NASA data and browser captures",
+      "bounds": [
+        42,
+        520,
+        820,
+        17.1
+      ]
+    },
+    {
       "slide": 7,
       "text": "06 / IMPACT AND NEXT STEPS",
       "bounds": [
@@ -744,7 +834,7 @@
     },
     {
       "slide": 7,
-      "text": "No live site is claimed. Official 2026 submission rules still require confirmation.",
+      "text": "Seven-slide demo; public source and data. Portal submission remains the team's responsibility.",
       "bounds": [
         42,
         382,
@@ -780,6 +870,16 @@
         505,
         30,
         21.0
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "SI-assisted implementation and layout; authentic NASA data and browser captures",
+      "bounds": [
+        42,
+        520,
+        820,
+        17.1
       ]
     }
   ]
