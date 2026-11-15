@@ -46,6 +46,8 @@ This is an engineering attribution review, not a legal opinion. Submission-speci
 
 ## Local checks and hosted CI
 
+Review artifact: [draft PR #2](https://github.com/wxu2206/climate-doppelganger/pull/2). The authentic snapshot is committed on `feat/climate-explorer`; the PR checks are authoritative for its latest head revision.
+
 The final local verification runs the data gate, full frontend suite, strict typecheck, ESLint, production build, full Python suites plus Ruff/Mypy/dependency consistency, and the full Chromium/browser/accessibility suite. See the final PR check results for the exact committed revision, rather than assuming local checks establish hosted success. The earlier commit `78df8ad` had successful hosted runs, but those runs did not include the then-staged authentic dataset:
 https://github.com/wxu2206/climate-doppelganger/actions/runs/43670480470
 

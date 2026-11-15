@@ -1,5 +1,7 @@
 # Authentic data acquisition and final verification
 
+This records the acquisition pass before the final review commit was published. Its local Git/hosted-CI status is historical; see the [final submission review](submission-readiness.md) and [draft PR #2](https://github.com/wxu2206/climate-doppelganger/pull/2) for the current committed revision and live checks.
+
 ## Outcome
 
 The primary submission data gate is **PASS**. `public/data/climate.json` now includes authentic NASA POWER/MERRA-2 observations for 10 locations over 1991–2024. Both Climate Twins and Change Twins were verified against the actual snapshot. The application implementation, ECC skills, dependency declarations and existing test coverage were preserved; this pass adds data, real-data regressions, provenance and documentation.
