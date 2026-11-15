@@ -119,3 +119,11 @@ No verified live deployment URL is available. Supply one only after an authorize
 ## Video or presentation link
 
 The actual artifacts are presentation/climate-doppelganger.pptx, presentation/climate-doppelganger.pdf and video/climate-doppelganger.mp4 in this package. Repository links become public when this branch is pushed; the final checklist records the PR. No external video-hosting URL has been published. [OWNER ACTION: upload the approved media or use verified repository artifact links according to the live portal's rules.]
+
+### Verified repository artifact URLs
+
+- Presentation: https://github.com/wxu2206/climate-doppelganger/blob/2193922/submission/presentation/climate-doppelganger.pptx
+- PDF: https://github.com/wxu2206/climate-doppelganger/blob/2193922/submission/presentation/climate-doppelganger.pdf
+- Actual recording: https://github.com/wxu2206/climate-doppelganger/blob/2193922/submission/video/climate-doppelganger.mp4
+
+These reference the published package commit, not a deployed application or external video host. Confirm that the portal accepts repository downloads before using them as submission links.

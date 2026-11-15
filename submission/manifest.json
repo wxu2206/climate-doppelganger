@@ -39,8 +39,8 @@
     },
     {
       "path": "presentation/font-license.txt",
-      "bytes": 3859,
-      "sha256": "63d3ba759d12804c5b31a9d5940d855c1820d1f5999e6b0872eb1c7ff045fbc9"
+      "bytes": 3857,
+      "sha256": "e81d9dced49fea2a7d576cbea283873de58563c5d488f954deb282843c3ea79c"
     },
     {
       "path": "project-description.md",
@@ -139,8 +139,8 @@
     },
     {
       "path": "submission-answers.md",
-      "bytes": 12165,
-      "sha256": "b3e6d926ec3ae6cf5f13c6939eb05d41f3eef37b203f76fea193b3c4c63ba6e3"
+      "bytes": 12762,
+      "sha256": "1e1e9ac6240a0ea4848a13abcad5f0bc88beac972dadd8860e63fe47af57f71e"
     },
     {
       "path": "video/climate-doppelganger.mp4",

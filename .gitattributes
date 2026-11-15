@@ -1,0 +1,5 @@
+# Presentation/media formats are binary, including PDF files with ASCII headers.
+*.pdf binary
+*.pptx binary
+*.mp4 binary
+*.png binary
