@@ -110,3 +110,7 @@ See [the network diagnosis](docs/network-diagnosis.md) and [portable local acqui
 ## Submission review
 
 See the [final readiness checklist](docs/submission-readiness.md), [submission-form drafts](docs/submission-form.md), and [review description](docs/pull-request.md). Official 2026 challenge wording and portal-specific requirements still require confirmation; local verification is separate from hosted CI and an official submission.
+
+## Submission package
+
+The [submission package](submission/README.md) contains the editable seven-slide presentation, matching PDF, authentic application screenshots, real browser recording, submission text, attribution, and deployment handoff. See [official-rule uncertainties](submission/requirements.md) and the [human-action checklist](submission/final-checklist.md). No AI-generated images or synthetic fixture screenshots are used in these materials.
