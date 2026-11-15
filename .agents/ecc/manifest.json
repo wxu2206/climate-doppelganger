@@ -1,0 +1,81 @@
+{
+  "repository": "https://github.com/affaan-m/ECC",
+  "commit": "d2ef2680594f9a17526a6e1a2e18b3d242c5d17b",
+  "files": [
+    {
+      "path": ".agents/skills/production-audit/SKILL.md",
+      "upstream_path": "skills/production-audit/SKILL.md",
+      "sha256": "3ab3dd8a364ee17566e9361f0ebed2aec3b3146ede44e1db0a72c5ceae1ca0a4"
+    },
+    {
+      "path": ".agents/skills/security-review/SKILL.md",
+      "upstream_path": "skills/security-review/SKILL.md",
+      "sha256": "b9eb6416eebc8dda046674f0a2dbb3be88aff526d182b60a0f55998d3d6d0d8d"
+    },
+    {
+      "path": ".agents/skills/security-review/cloud-infrastructure-security.md",
+      "upstream_path": "skills/security-review/cloud-infrastructure-security.md",
+      "sha256": "7d9a83852475a9396e04c59c73df84ac24ee0f41322016de7c11c62138c2a8ca"
+    },
+    {
+      "path": ".agents/skills/security-review/agents/openai.yaml",
+      "upstream_path": ".agents/skills/security-review/agents/openai.yaml",
+      "sha256": "40a07bb9a3933a13d4403e59d72426d5cc25ddd67a91f6fabee6f03c0721266b"
+    },
+    {
+      "path": ".agents/skills/frontend-a11y/SKILL.md",
+      "upstream_path": "skills/frontend-a11y/SKILL.md",
+      "sha256": "e00991a3f4d47fcf1529dd74a080afcf46137dc5061e70dc6e3da7b27f2ae3f3"
+    },
+    {
+      "path": ".agents/skills/tdd-workflow/SKILL.md",
+      "upstream_path": "skills/tdd-workflow/SKILL.md",
+      "sha256": "b6a8dd3e5215641cd9c33a46eae1d2b87508a07bc451e2c2fe25591f33a6b519"
+    },
+    {
+      "path": ".agents/skills/tdd-workflow/agents/openai.yaml",
+      "upstream_path": ".agents/skills/tdd-workflow/agents/openai.yaml",
+      "sha256": "d68700053a6f3a4a65ec18e34bcef58e75986b5f8ae19f6e20e7412ccbd895a4"
+    },
+    {
+      "path": ".agents/skills/verification-loop/SKILL.md",
+      "upstream_path": "skills/verification-loop/SKILL.md",
+      "sha256": "9ee288d426660b0c785f534a003a4960fb4d8083a21302d8a4fd9b035b2edbb1"
+    },
+    {
+      "path": ".agents/skills/verification-loop/agents/openai.yaml",
+      "upstream_path": ".agents/skills/verification-loop/agents/openai.yaml",
+      "sha256": "6ec7745a73b6370a72dd96cdab7bdc71f3a383416d87ddfa943e91226d7c0559"
+    },
+    {
+      "path": ".agents/ecc/LICENSE",
+      "upstream_path": "LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/ecc/scripts/setup-package-manager.js",
+      "upstream_path": "scripts/setup-package-manager.js",
+      "sha256": "499f38ef03b3f7f9896ad97229b8213df215544bb3c6bd6343e3889f023f6bda"
+    },
+    {
+      "path": ".agents/ecc/scripts/lib/package-manager.js",
+      "upstream_path": "scripts/lib/package-manager.js",
+      "sha256": "636f8bc8379ae0c26be1f7c5b61555cf2a274698a4f9fbd34e9eced9eacb3662"
+    },
+    {
+      "path": ".agents/ecc/scripts/lib/utils.js",
+      "upstream_path": "scripts/lib/utils.js",
+      "sha256": "9cd46ca7d5695a9f8be5afc8da618c29b58e65f4be1411531a64485684592710"
+    },
+    {
+      "path": ".agents/ecc/scripts/lib/agent-data-home.js",
+      "upstream_path": "scripts/lib/agent-data-home.js",
+      "sha256": "afc7d0ebe7b747345063f716c18816d6351e94cc1641303a4568fe70858e5710"
+    },
+    {
+      "path": ".agents/ecc/scripts/lib/path-safety.js",
+      "upstream_path": "scripts/lib/path-safety.js",
+      "sha256": "542126cf47247161dd26713a1f33d34af2881db46435ac8ecef76a8be31c062c"
+    }
+  ]
+}

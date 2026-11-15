@@ -1,0 +1,55 @@
+name: CI
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  frontend:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm run build
+      - name: Validate production observations when present
+        run: |
+          if test -f public/data/climate.json; then
+            npm run data:check
+          else
+            echo "NASA data absent; scientific submission readiness remains unverified."
+          fi
+      - run: npx --no-install playwright install chromium
+      - run: npm run test:e2e
+  python:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.13"]
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+          cache-dependency-path: requirements-lock.txt
+      - run: python -m venv .venv
+      - run: .venv/bin/python -m pip install -r requirements-lock.txt
+      - run: .venv/bin/python -m pip install --no-deps -e .
+      - run: .venv/bin/python -m pytest
+      - run: .venv/bin/python -m ruff check pipeline tests
+      - run: .venv/bin/python -m mypy pipeline
+      - run: .venv/bin/python -m pip check
+      - run: .venv/bin/python -m compileall -q pipeline tests
